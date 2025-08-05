@@ -1,0 +1,91 @@
+import { MessageCircle, Brush, Cpu, Rocket } from 'lucide-react';
+
+const ProcessSection = () => {
+  const steps = [
+    {
+      number: "01",
+      icon: MessageCircle,
+      title: "Briefing",
+      description: "Entendemos sua marca, objetivos e visão para o avatar perfeito"
+    },
+    {
+      number: "02", 
+      icon: Brush,
+      title: "Design",
+      description: "Criamos conceitos visuais únicos que refletem sua identidade"
+    },
+    {
+      number: "03",
+      icon: Cpu,
+      title: "IA Training",
+      description: "Treinamos a inteligência artificial com dados específicos da sua marca"
+    },
+    {
+      number: "04",
+      icon: Rocket,
+      title: "Deploy",
+      description: "Implementamos e integramos o avatar nas suas plataformas digitais"
+    }
+  ];
+
+  return (
+    <section id="process" className="py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            CRIAÇÃO PERSONALIZADA
+          </h2>
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-muted-foreground max-w-3xl mx-auto tracking-wide">
+            Nosso processo de criação em 4 etapas garante
+            <br />
+            um avatar de IA único e perfeitamente alinhado à sua marca
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Process Timeline */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-border transform -translate-y-1/2"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div 
+                key={index}
+                className="relative text-center animate-slide-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                {/* Step Number */}
+                <div className="relative z-10 w-24 h-24 bg-orchestra-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="font-futura-medium text-2xl text-white tracking-wide">
+                    {step.number}
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <div className="w-16 h-16 bg-white border-2 border-border rounded-full flex items-center justify-center mx-auto mb-6 hover:border-accent transition-colors duration-300">
+                  <step.icon className="w-8 h-8 text-accent" />
+                </div>
+
+                {/* Content */}
+                <h3 className="font-futura-medium text-xl text-primary mb-4 tracking-wide">
+                  {step.title}
+                </h3>
+                
+                <p className="font-futura text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                  {step.description}
+                </p>
+
+                {/* Connection Line for Mobile */}
+                {index < steps.length - 1 && (
+                  <div className="lg:hidden w-px h-12 bg-border mx-auto mt-8"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProcessSection;

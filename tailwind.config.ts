@@ -24,6 +24,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				black: 'hsl(var(--black))',
+				white: 'hsl(var(--white))',
+				orchestra: {
+					gold: {
+						start: 'hsl(var(--orchestra-gold-start))',
+						end: 'hsl(var(--orchestra-gold-end))'
+					}
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +70,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				futura: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+			},
+			backgroundImage: {
+				'orchestra-gradient': 'var(--orchestra-gradient)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
