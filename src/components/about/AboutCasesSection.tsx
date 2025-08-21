@@ -46,11 +46,11 @@ const AboutCasesSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="font-futura-medium text-4xl md:text-5xl font-bold text-primary mb-6">
             Casos e Aplicações
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="font-futura text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             Exemplos reais de como avatares de IA transformam diferentes segmentos
           </p>
         </motion.div>
@@ -67,16 +67,16 @@ const AboutCasesSection: React.FC = () => {
               className="group relative bg-background rounded-2xl p-6 border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               {/* Tag */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium font-inter mb-4">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium font-futura mb-4">
                 {caseItem.tag}
               </div>
               
               {/* Content */}
               <div className="space-y-2">
-                <h3 className="font-playfair text-lg font-semibold text-primary group-hover:text-accent transition-colors">
+                <h3 className="font-futura-medium text-lg font-semibold text-primary group-hover:text-accent transition-colors">
                   {caseItem.title}
                 </h3>
-                <p className="font-inter text-muted-foreground text-sm leading-relaxed">
+                <p className="font-futura text-foreground/70 text-sm leading-relaxed">
                   {caseItem.subtitle}
                 </p>
               </div>
@@ -96,10 +96,10 @@ const AboutCasesSection: React.FC = () => {
           className="text-center mt-16"
         >
           <div className="bg-background rounded-2xl p-8 border border-border/50 max-w-2xl mx-auto">
-            <p className="font-inter text-lg font-medium text-primary mb-4">
+            <p className="font-futura text-lg font-medium text-primary mb-4">
               Qual será o próximo caso de sucesso?
             </p>
-            <p className="font-inter text-muted-foreground">
+            <p className="font-futura text-foreground/70">
               Cada projeto é único e desenvolvido sob medida para suas necessidades específicas
             </p>
           </div>

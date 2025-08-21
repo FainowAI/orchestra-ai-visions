@@ -29,7 +29,7 @@ const AboutHeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-inter text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="font-inter text-xl md:text-2xl text-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Influência, performance e inteligência visual com tecnologia generativa.
           </motion.p>
@@ -69,7 +69,7 @@ const AboutHeroSection: React.FC = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center text-muted-foreground hover:text-accent transition-colors cursor-pointer"
+            className="flex flex-col items-center text-foreground/70 hover:text-accent transition-colors cursor-pointer"
           >
             <span className="font-inter text-sm mb-2 tracking-wider">Role para explorar</span>
             <ArrowDown className="w-6 h-6" />

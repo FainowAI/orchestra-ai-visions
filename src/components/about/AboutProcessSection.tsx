@@ -41,12 +41,14 @@ const AboutProcessSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
-            Como Funciona
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            NOSSO PROCESSO
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Processo estruturado em 4 etapas para garantir resultados excepcionais
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Metodologia estruturada em 4 etapas
+            <br />
+            para garantir avatares únicos e resultados excepcionais
           </p>
         </motion.div>
 
@@ -68,7 +70,7 @@ const AboutProcessSection: React.FC = () => {
               >
                 {/* Step Number */}
                 <div className="relative z-10 w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <span className="font-playfair text-xl font-bold text-accent-foreground">
+                  <span className="font-futura-medium text-xl text-accent-foreground tracking-wide">
                     {step.number}
                   </span>
                 </div>
@@ -80,11 +82,11 @@ const AboutProcessSection: React.FC = () => {
 
                 {/* Content */}
                 <div className="bg-background rounded-2xl p-6 shadow-sm border border-border/50 hover:border-accent/30 transition-all duration-300">
-                  <h3 className="font-playfair text-lg font-semibold text-primary mb-3 leading-snug">
+                  <h3 className="font-futura-medium text-lg text-primary mb-3 tracking-wide leading-snug">
                     {step.title}
                   </h3>
                   
-                  <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+                  <p className="font-futura text-sm text-foreground/70 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -106,7 +108,7 @@ const AboutProcessSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="font-inter text-lg text-muted-foreground">
+          <p className="font-futura text-lg text-foreground/70">
             Cada etapa é cuidadosamente planejada para garantir o sucesso do seu projeto
           </p>
         </motion.div>

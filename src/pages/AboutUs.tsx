@@ -18,9 +18,33 @@ const AboutUs: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Orchestra",
-    "description": "Agência especializada na criação de avatares digitais hiper-realistas com IA Generativa",
+    "alternateName": "Agência Orchestra",
+    "description": "Agência de criatividade e performance especializada em avatares digitais hiper-realistas, clones personalizados e modelos virtuais com IA generativa para campanhas de marketing e branding estratégico",
     "url": "https://orchestra.ai",
     "logo": "https://orchestra.ai/logo.png",
+    "foundingDate": "2024",
+    "numberOfEmployees": "10-50",
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Brasil"
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Criação de Avatares Digitais com IA Generativa",
+        "description": "Desenvolvimento de avatares digitais hiper-realistas, clones personalizados e modelos virtuais para campanhas de marketing"
+      }
+    },
+    "knowsAbout": [
+      "Avatares Digitais",
+      "IA Generativa", 
+      "Clones Personalizados",
+      "Modelos Virtuais",
+      "Marketing Digital",
+      "Branding",
+      "Digital Twins"
+    ],
     "sameAs": [
       "https://instagram.com/orchestra.ai",
       "https://linkedin.com/company/orchestra-ai"
@@ -28,6 +52,7 @@ const AboutUs: React.FC = () => {
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "São Paulo",
+      "addressRegion": "SP",
       "addressCountry": "BR"
     }
   };
@@ -35,24 +60,24 @@ const AboutUs: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Quem Somos | Orchestra - Avatares de IA Hiper-Realistas</title>
+        <title>Quem Somos | Orchestra - Agência de Avatares Digitais Hiper-Realistas com IA Generativa</title>
         <meta 
           name="description" 
-          content="Conheça a Orchestra, agência especializada em avatares digitais com IA Generativa. Criatividade, performance e tecnologia para sua marca se destacar." 
+          content="Orchestra: agência de criatividade e performance especializada em avatares digitais hiper-realistas, clones personalizados e modelos virtuais com IA generativa para campanhas de marketing e branding estratégico." 
         />
-        <meta name="keywords" content="avatares IA, inteligência artificial, marketing digital, avatares virtuais, clones digitais, IA generativa" />
+        <meta name="keywords" content="avatares digitais hiper-realistas, IA generativa, clones personalizados, modelos virtuais, agência de performance, marketing com IA, avatares para campanhas, branding digital, digital twins, criatividade e performance" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Quem Somos | Orchestra - Avatares de IA Hiper-Realistas" />
-        <meta property="og:description" content="Conheça a Orchestra, agência especializada em avatares digitais com IA Generativa. Criatividade, performance e tecnologia para sua marca se destacar." />
+        <meta property="og:title" content="Orchestra - Agência de Avatares Digitais Hiper-Realistas com IA Generativa" />
+        <meta property="og:description" content="Agência especializada em avatares digitais hiper-realistas, clones personalizados e modelos virtuais com IA generativa. Criatividade e performance para sua marca." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://orchestra.ai/og-about.jpg" />
         <meta property="og:url" content="https://orchestra.ai/quem-somos" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Quem Somos | Orchestra - Avatares de IA Hiper-Realistas" />
-        <meta name="twitter:description" content="Conheça a Orchestra, agência especializada em avatares digitais com IA Generativa." />
+        <meta name="twitter:title" content="Orchestra - Avatares Digitais Hiper-Realistas com IA Generativa" />
+        <meta name="twitter:description" content="Agência de criatividade e performance especializada em avatares digitais, clones personalizados e modelos virtuais com IA generativa." />
         <meta name="twitter:image" content="https://orchestra.ai/og-about.jpg" />
         
         {/* JSON-LD */}

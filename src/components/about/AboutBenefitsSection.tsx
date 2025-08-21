@@ -42,12 +42,14 @@ const AboutBenefitsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
-            Por que as marcas escolhem a Orchestra
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            POR QUE ORCHESTRA
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Vantagens estratégicas que transformam sua comunicação digital
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Vantagens competitivas que transformam sua comunicação
+            <br />
+            e posicionam sua marca à frente da concorrência
           </p>
         </motion.div>
 
@@ -69,10 +71,10 @@ const AboutBenefitsSection: React.FC = () => {
               
               {/* Content */}
               <div className="flex-1">
-                <h3 className="font-playfair text-xl font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
+                <h3 className="font-futura-medium text-xl text-primary mb-2 tracking-wide group-hover:text-accent transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="font-inter text-muted-foreground leading-relaxed">
+                <p className="font-futura text-foreground/70 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

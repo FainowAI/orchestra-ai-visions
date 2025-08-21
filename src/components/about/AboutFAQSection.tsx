@@ -46,12 +46,14 @@ const AboutFAQSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
-            Perguntas Frequentes
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            PERGUNTAS FREQUENTES
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Esclarecemos as principais dúvidas sobre nossos serviços
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Esclarecemos as principais dúvidas
+            <br />
+            sobre avatares digitais e nossos serviços
           </p>
         </motion.div>
 
@@ -73,7 +75,7 @@ const AboutFAQSection: React.FC = () => {
                 <AccordionTrigger className="font-playfair text-lg font-semibold text-primary hover:text-accent transition-colors py-6 text-left">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="font-inter text-muted-foreground leading-relaxed pb-6">
+                <AccordionContent className="font-futura text-foreground/70 leading-relaxed pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -90,15 +92,15 @@ const AboutFAQSection: React.FC = () => {
           className="text-center mt-16"
         >
           <div className="bg-background rounded-2xl p-8 border border-border/50 max-w-2xl mx-auto">
-            <p className="font-inter text-lg font-medium text-primary mb-4">
+            <p className="font-futura text-lg font-medium text-primary mb-4">
               Ainda tem dúvidas?
             </p>
-            <p className="font-inter text-muted-foreground mb-6">
+            <p className="font-futura text-foreground/70 mb-6">
               Nossa equipe está pronta para esclarecer qualquer questão sobre avatares de IA
             </p>
             <a
               href="#contact"
-              className="font-inter text-accent font-medium hover:text-accent/80 transition-colors underline underline-offset-4"
+              className="font-futura text-accent font-medium hover:text-accent/80 transition-colors underline underline-offset-4"
             >
               Entre em contato conosco
             </a>

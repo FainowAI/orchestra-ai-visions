@@ -54,12 +54,14 @@ const AboutTechSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
-            Tecnologias e Garantias
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            TECNOLOGIA E GARANTIAS
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Inovação tecnológica com segurança e qualidade garantidas
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Inovação tecnológica com IA generativa
+            <br />
+            e garantias de segurança e qualidade
           </p>
         </motion.div>
 
@@ -72,7 +74,7 @@ const AboutTechSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <h3 className="font-playfair text-2xl font-semibold text-primary mb-8">
+            <h3 className="font-futura-medium text-2xl font-semibold text-primary mb-8">
               Nossas Tecnologias
             </h3>
             
@@ -92,13 +94,13 @@ const AboutTechSection: React.FC = () => {
                       </div>
                       
                       <div className="flex-1">
-                        <h4 className="font-playfair text-lg font-semibold text-primary mb-1">
+                        <h4 className="font-futura-medium text-lg font-semibold text-primary mb-1">
                           {tech.title}
                         </h4>
-                        <p className="font-inter text-sm font-medium text-accent mb-2">
+                        <p className="font-futura text-sm font-medium text-accent mb-2">
                           {tech.subtitle}
                         </p>
-                        <p className="font-inter text-muted-foreground text-sm leading-relaxed">
+                        <p className="font-futura text-foreground/70 text-sm leading-relaxed">
                           {tech.description}
                         </p>
                       </div>
@@ -117,7 +119,7 @@ const AboutTechSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <h3 className="font-playfair text-2xl font-semibold text-primary mb-8">
+            <h3 className="font-futura-medium text-2xl font-semibold text-primary mb-8">
               Nossas Garantias
             </h3>
             
@@ -137,10 +139,10 @@ const AboutTechSection: React.FC = () => {
                       </div>
                       
                       <div className="flex-1">
-                        <h4 className="font-playfair text-lg font-semibold text-primary mb-2">
+                        <h4 className="font-futura-medium text-lg font-semibold text-primary mb-2">
                           {guarantee.title}
                         </h4>
-                        <p className="font-inter text-muted-foreground text-sm leading-relaxed">
+                        <p className="font-futura text-foreground/70 text-sm leading-relaxed">
                           {guarantee.description}
                         </p>
                       </div>
@@ -160,10 +162,10 @@ const AboutTechSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16 p-8 bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl border border-accent/20"
         >
-          <p className="font-inter text-lg font-medium text-primary mb-2">
+          <p className="font-futura text-lg font-medium text-primary mb-2">
             Tecnologia de ponta com responsabilidade
           </p>
-          <p className="font-inter text-muted-foreground">
+          <p className="font-futura text-foreground/70">
             Cada avatar é criado com os mais altos padrões de qualidade e ética
           </p>
         </motion.div>

@@ -46,11 +46,11 @@ const AboutImpactSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="font-futura-medium text-4xl md:text-5xl font-bold text-primary mb-6">
             Impacto Comprovado
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="font-futura text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             Números reais que demonstram o poder dos avatares de IA
           </p>
         </motion.div>
@@ -83,17 +83,17 @@ const AboutImpactSection: React.FC = () => {
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                     className="relative z-10"
                   >
-                    <h3 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="font-futura-medium text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">
                       {metric.number}
                     </h3>
                   </motion.div>
                   
                   {/* Label */}
                   <div className="relative z-10">
-                    <p className="font-inter text-lg font-medium text-primary mb-1">
+                    <p className="font-futura text-lg font-medium text-primary mb-1">
                       {metric.label}
                     </p>
-                    <p className="font-inter text-sm text-muted-foreground">
+                    <p className="font-futura text-sm text-foreground/70">
                       {metric.subtitle}
                     </p>
                   </div>
@@ -112,10 +112,10 @@ const AboutImpactSection: React.FC = () => {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20 max-w-4xl mx-auto">
-            <blockquote className="font-playfair text-xl md:text-2xl font-medium text-primary mb-4 italic">
+            <blockquote className="font-futura-medium text-xl md:text-2xl font-medium text-primary mb-4 italic">
               "A tecnologia de avatares da Orchestra revolucionou nossa estratégia de conteúdo. Conseguimos manter consistência visual e acelerar nossa produção sem comprometer a qualidade."
             </blockquote>
-            <cite className="font-inter text-muted-foreground">
+            <cite className="font-futura text-foreground/70">
               — Cliente Orchestra, Agência de Marketing Digital
             </cite>
           </div>

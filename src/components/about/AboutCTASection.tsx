@@ -28,9 +28,9 @@ const AboutCTASection: React.FC = () => {
             </div>
             
             {/* Title */}
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Vamos criar o próximo avatar
-              <span className="block font-normal italic">da sua marca?</span>
+            <h2 className="font-futura-light text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight tracking-widest">
+              PRONTO PARA REVOLUCIONAR
+              <span className="block">SUA MARCA?</span>
             </h2>
             
             {/* Description */}
@@ -39,9 +39,11 @@ const AboutCTASection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-inter text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+              className="font-futura text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              Propostas sob medida para lançamentos, campanhas com influenciadores, posicionamento institucional e conteúdo de performance.
+              Crie avatares digitais hiper-realistas que transformam
+              <br />
+              a experiência digital da sua marca
             </motion.p>
           </motion.div>
 
@@ -55,7 +57,7 @@ const AboutCTASection: React.FC = () => {
           >
             <Button
               size="lg"
-              className="bg-white text-accent hover:bg-white/90 font-inter font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
+              className="bg-white text-accent hover:bg-white/90 font-futura font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
             >
               Solicitar proposta
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -64,7 +66,7 @@ const AboutCTASection: React.FC = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-inter font-medium px-8 py-4 rounded-2xl transition-all duration-300"
+              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-futura font-medium px-8 py-4 rounded-2xl transition-all duration-300"
             >
               Ver nosso portfólio
             </Button>
@@ -79,18 +81,18 @@ const AboutCTASection: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
             <div className="text-center">
-              <h4 className="font-inter font-semibold text-white mb-2">Proposta Gratuita</h4>
-              <p className="font-inter text-white/80 text-sm">Análise completa sem compromisso</p>
+              <h4 className="font-futura font-semibold text-white mb-2">Proposta Gratuita</h4>
+              <p className="font-futura text-white/80 text-sm">Análise completa sem compromisso</p>
             </div>
             
             <div className="text-center">
-              <h4 className="font-inter font-semibold text-white mb-2">Entrega Rápida</h4>
-              <p className="font-inter text-white/80 text-sm">Primeiros resultados em até 2 semanas</p>
+              <h4 className="font-futura font-semibold text-white mb-2">Entrega Rápida</h4>
+              <p className="font-futura text-white/80 text-sm">Primeiros resultados em até 2 semanas</p>
             </div>
             
             <div className="text-center">
-              <h4 className="font-inter font-semibold text-white mb-2">Suporte Total</h4>
-              <p className="font-inter text-white/80 text-sm">Acompanhamento durante todo projeto</p>
+              <h4 className="font-futura font-semibold text-white mb-2">Suporte Total</h4>
+              <p className="font-futura text-white/80 text-sm">Acompanhamento durante todo projeto</p>
             </div>
           </motion.div>
         </div>

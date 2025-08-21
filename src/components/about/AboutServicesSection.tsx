@@ -38,12 +38,14 @@ const AboutServicesSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">
-            O que Fazemos
+          <h2 className="font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest">
+            NOSSOS SERVIÇOS
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
-          <p className="font-inter text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Soluções completas em avatares de IA para transformar sua comunicação digital
+          <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
+          <p className="font-futura text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Soluções completas em avatares digitais hiper-realistas com IA generativa
+            <br />
+            para transformar sua comunicação e performance de marca
           </p>
         </motion.div>
 
@@ -65,12 +67,12 @@ const AboutServicesSection: React.FC = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="font-playfair text-2xl font-semibold text-primary mb-4 group-hover:text-accent transition-colors">
+                  <h3 className="font-futura-medium text-xl text-primary mb-4 tracking-wide group-hover:text-accent transition-colors">
                     {service.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="font-inter text-muted-foreground leading-relaxed text-base">
+                  <p className="font-futura text-foreground/70 leading-relaxed text-base">
                     {service.description}
                   </p>
                 </CardContent>
@@ -87,7 +89,7 @@ const AboutServicesSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="font-inter text-lg text-muted-foreground mb-6">
+          <p className="font-futura text-lg text-foreground/70 mb-6">
             Cada serviço é customizado para atender seus objetivos específicos
           </p>
           <div className="w-32 h-px bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
