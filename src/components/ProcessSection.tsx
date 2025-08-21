@@ -56,13 +56,13 @@ const ProcessSection = () => {
               >
                 {/* Step Number */}
                 <div className="relative z-10 w-24 h-24 bg-orchestra-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="font-futura-medium text-2xl text-white tracking-wide">
+                  <span className="font-futura-medium text-2xl text-primary-foreground tracking-wide">
                     {step.number}
                   </span>
                 </div>
 
                 {/* Icon */}
-                <div className="w-16 h-16 bg-white border-2 border-border rounded-full flex items-center justify-center mx-auto mb-6 hover:border-accent transition-colors duration-300">
+                <div className="w-16 h-16 bg-background border-2 border-border rounded-full flex items-center justify-center mx-auto mb-6 hover:border-accent transition-colors duration-300">
                   <step.icon className="w-8 h-8 text-accent" />
                 </div>
 

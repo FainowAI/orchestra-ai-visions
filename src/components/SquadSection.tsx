@@ -50,7 +50,7 @@ const SquadSection = () => {
               className="group cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="relative overflow-hidden rounded-lg bg-white hover-lift">
+              <div className="relative overflow-hidden rounded-lg bg-card hover-lift">
                 <div className="aspect-square overflow-hidden">
                   <img 
                     src={avatar.image} 
@@ -77,7 +77,7 @@ const SquadSection = () => {
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-orchestra-gradient opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="font-futura text-white tracking-wide">
+                  <span className="font-futura text-primary-foreground tracking-wide">
                     Ver Detalhes
                   </span>
                 </div>
@@ -90,7 +90,7 @@ const SquadSection = () => {
           <Button 
             variant="outline"
             size="lg"
-            className="font-futura tracking-wide border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-3"
+            className="font-futura tracking-wide border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3"
           >
             Ver Todos os Avatares
           </Button>

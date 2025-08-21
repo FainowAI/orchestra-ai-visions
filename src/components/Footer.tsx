@@ -22,17 +22,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <span className="font-futura-light text-3xl tracking-widest text-white">
+              <span className="font-futura-light text-3xl tracking-widest text-primary-foreground">
                 ORCHESTRA
               </span>
             </div>
-            <p className="font-futura text-white/70 leading-relaxed max-w-md mb-6">
+            <p className="font-futura text-muted-foreground leading-relaxed max-w-md mb-6">
               Criamos avatares de IA únicos que revolucionam a experiência digital das marcas mais inovadoras do mercado.
             </p>
             <div className="flex space-x-4">
@@ -40,10 +40,10 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orchestra-gradient transition-all duration-300 group"
+                  className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-orchestra-gradient transition-all duration-300 group"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-white group-hover:text-black" />
+                  <social.icon className="w-5 h-5 text-primary-foreground group-hover:text-primary-foreground" />
                 </a>
               ))}
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-futura-medium text-lg text-white mb-6 tracking-wide">
+            <h3 className="font-futura-medium text-lg text-primary-foreground mb-6 tracking-wide">
               Links Rápidos
             </h3>
             <div className="space-y-3">
@@ -59,7 +59,7 @@ const Footer = () => {
                 <button
                   key={index}
                   onClick={() => scrollToSection(link.href)}
-                  className="block font-futura text-white/70 hover:text-orchestra-gold-start transition-colors duration-200"
+                  className="block font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
                 >
                   {link.label}
                 </button>
@@ -69,20 +69,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-futura-medium text-lg text-white mb-6 tracking-wide">
+            <h3 className="font-futura-medium text-lg text-primary-foreground mb-6 tracking-wide">
               Contato
             </h3>
             <div className="space-y-3">
               <a 
                 href="mailto:contato@orchestra.ai"
-                className="flex items-center space-x-3 font-futura text-white/70 hover:text-orchestra-gold-start transition-colors duration-200"
+                className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
                 <span>contato@orchestra.ai</span>
               </a>
               <a 
                 href="tel:+5511999999999"
-                className="flex items-center space-x-3 font-futura text-white/70 hover:text-orchestra-gold-start transition-colors duration-200"
+                className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
               >
                 <Phone className="w-4 h-4" />
                 <span>+55 11 99999-9999</span>
@@ -92,16 +92,16 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
+        <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-futura text-white/50 text-sm">
+            <p className="font-futura text-muted-foreground text-sm">
               © 2024 Orchestra. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="font-futura text-white/50 hover:text-white text-sm transition-colors duration-200">
+              <a href="#" className="font-futura text-muted-foreground hover:text-primary-foreground text-sm transition-colors duration-200">
                 Política de Privacidade
               </a>
-              <a href="#" className="font-futura text-white/50 hover:text-white text-sm transition-colors duration-200">
+              <a href="#" className="font-futura text-muted-foreground hover:text-primary-foreground text-sm transition-colors duration-200">
                 Termos de Uso
               </a>
             </div>
