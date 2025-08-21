@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import AboutHeroSection from '@/components/about/AboutHeroSection';
 import AboutWhoWeAreSection from '@/components/about/AboutWhoWeAreSection';
 import AboutServicesSection from '@/components/about/AboutServicesSection';
 import AboutBenefitsSection from '@/components/about/AboutBenefitsSection';
@@ -64,7 +63,6 @@ const AboutUs: React.FC = () => {
 
       <div className="min-h-screen bg-background dark:bg-background">
         <Navigation />
-        <AboutHeroSection />
         <AboutWhoWeAreSection />
         <AboutServicesSection />
         <AboutBenefitsSection />
