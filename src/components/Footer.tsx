@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Linkedin, Mail, Phone } from 'lucide-react';
+import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
@@ -74,18 +74,11 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <a 
-                href="mailto:contato@orchestra.ai"
+                href="mailto:comercial@agenciaorchestra.ai"
                 className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
                 <span>comercial@agenciaorchestra.ai</span>
-              </a>
-              <a 
-                href="tel:+5511999999999"
-                className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+55 11 99999-9999</span>
               </a>
             </div>
           </div>
