@@ -78,7 +78,7 @@ const Footer = () => {
                 className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
-                <span>contato@orchestra.ai</span>
+                <span>comercial@agenciaorchestra.ai</span>
               </a>
               <a 
                 href="tel:+5511999999999"
