@@ -11,7 +11,7 @@ const PortfolioSection = () => {
       title: "TechCorp Avatar",
       category: "Tecnologia",
       description: "Avatar corporativo para empresa de tecnologia, focado em comunicação técnica e liderança digital.",
-      image: "/api/placeholder/800/600",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
       results: ["30% aumento engajamento", "50% redução tempo resposta", "95% satisfação usuários"]
     },
     {
@@ -19,7 +19,7 @@ const PortfolioSection = () => {
       title: "Fashion Brand AI",
       category: "Moda",
       description: "Avatar de moda para marca premium, especializado em styling e tendências contemporâneas.",
-      image: "/api/placeholder/800/600",
+      image: "https://images.unsplash.com/photo-1558618668-fcd25c85cd64?w=800&h=600&fit=crop",
       results: ["45% crescimento vendas", "60% aumento tempo sessão", "200% mais interações"]
     },
     {
@@ -27,7 +27,7 @@ const PortfolioSection = () => {
       title: "Finance Assistant",
       category: "Finanças",
       description: "Avatar financeiro para consultoria especializada, focado em educação e assessoria personalizada.",
-      image: "/api/placeholder/800/600",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
       results: ["25% novos clientes", "40% redução churn", "80% aprovação NPS"]
     }
   ];
