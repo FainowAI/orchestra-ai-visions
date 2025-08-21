@@ -72,7 +72,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				futura: ['Montserrat', 'Futura', 'Futura PT', 'Futura Std', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'futura': ['Montserrat', 'Futura', 'Futura PT', 'Futura Std', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			backgroundImage: {
 				'orchestra-gradient': 'var(--orchestra-gradient)',
