@@ -42,7 +42,7 @@ const CTASection = () => {
               size="lg"
               className="font-futura tracking-wide bg-transparent border-2 border-white text-white hover:bg-white/10 transition-all duration-300 px-8 py-4 text-lg"
             >
-              Agendar Consulta
+              Entre em contato
             </Button>
           </div>
 
