@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroAvatar from '@/assets/hero-avatar.jpg';
 import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+const anime = require('animejs');
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);

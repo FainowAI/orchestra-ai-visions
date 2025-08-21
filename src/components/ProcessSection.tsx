@@ -1,6 +1,6 @@
 import { MessageCircle, Brush, Cpu, Rocket } from 'lucide-react';
 import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+const anime = require('animejs');
 
 const ProcessSection = () => {
   const sectionRef = useRef<HTMLElement>(null);

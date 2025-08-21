@@ -1,4 +1,4 @@
-import anime from 'animejs';
+const anime = require('animejs');
 
 // Elegant entrance animations for luxury brand
 export const fadeInUp = (targets: string | Element | Element[], delay = 0) => {

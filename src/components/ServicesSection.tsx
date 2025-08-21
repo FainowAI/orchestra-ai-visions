@@ -1,7 +1,7 @@
 import { Brain, Palette, Users, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+const anime = require('animejs');
 
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
