@@ -40,7 +40,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="font-futura-light text-2xl tracking-widest text-primary">
+            <span className={`font-futura-light text-2xl tracking-widest transition-colors duration-200 ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`}>
               ORCHESTRA
             </span>
           </div>
@@ -52,7 +54,11 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="font-futura text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className={`font-futura text-sm tracking-wide transition-colors duration-200 ${
+                    isScrolled 
+                      ? 'text-foreground/70 hover:text-primary' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -66,7 +72,11 @@ const Navigation = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-primary hover:text-accent transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                isScrolled 
+                  ? 'text-primary hover:text-accent' 
+                  : 'text-white hover:text-white/80'
+              }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -82,7 +92,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="block font-futura text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="block font-futura text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {item.label}
               </button>

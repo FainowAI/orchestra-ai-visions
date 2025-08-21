@@ -27,7 +27,7 @@ Inspired by high-end fashion and luxury brands
     --secondary-foreground: 0 0% 5%;
 
     --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 35%; /* Improved contrast for light mode */
 
     --accent: 37 89% 58%; /* Orchestra gold */
     --accent-foreground: 0 0% 5%;
@@ -84,7 +84,7 @@ Inspired by high-end fashion and luxury brands
     --secondary-foreground: 0 0% 95%;
 
     --muted: 220 13% 15%;
-    --muted-foreground: 0 0% 65%; /* Muted gray text */
+    --muted-foreground: 0 0% 75%; /* Improved contrast for muted text */
 
     --accent: 37 89% 58%; /* Keep Orchestra gold */
     --accent-foreground: 220 13% 8%;

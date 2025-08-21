@@ -33,7 +33,7 @@ const ServicesSection = () => {
             O QUE FAZEMOS
           </h2>
           <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
-          <p className="font-futura text-xl text-muted-foreground max-w-3xl mx-auto tracking-wide">
+          <p className="font-futura text-xl text-foreground/70 max-w-3xl mx-auto tracking-wide">
             Transformamos ideias em avatares de IA que redefinem
             <br />
             a experiência digital das marcas mais inovadoras
@@ -56,7 +56,7 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
                 
-                <p className="font-futura text-muted-foreground leading-relaxed">
+                <p className="font-futura text-foreground/70 leading-relaxed">
                   {service.description}
                 </p>
               </CardContent>

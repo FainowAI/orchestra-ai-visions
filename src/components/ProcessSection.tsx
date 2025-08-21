@@ -36,7 +36,7 @@ const ProcessSection = () => {
             CRIAÇÃO PERSONALIZADA
           </h2>
           <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
-          <p className="font-futura text-xl text-muted-foreground max-w-3xl mx-auto tracking-wide">
+          <p className="font-futura text-xl text-foreground/70 max-w-3xl mx-auto tracking-wide">
             Nosso processo de criação em 4 etapas garante
             <br />
             um avatar de IA único e perfeitamente alinhado à sua marca
@@ -71,7 +71,7 @@ const ProcessSection = () => {
                   {step.title}
                 </h3>
                 
-                <p className="font-futura text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                <p className="font-futura text-foreground/70 leading-relaxed max-w-xs mx-auto">
                   {step.description}
                 </p>
 

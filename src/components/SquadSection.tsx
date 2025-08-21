@@ -36,7 +36,7 @@ const SquadSection = () => {
             NOSSO SQUAD
           </h2>
           <div className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"></div>
-          <p className="font-futura text-xl text-muted-foreground max-w-3xl mx-auto tracking-wide">
+          <p className="font-futura text-xl text-foreground/70 max-w-3xl mx-auto tracking-wide">
             Conheça alguns dos avatares de IA que criamos
             <br />
             para revolucionar a presença digital das marcas
@@ -70,7 +70,7 @@ const SquadSection = () => {
                     {avatar.name}
                   </h3>
                   
-                  <p className="font-futura text-muted-foreground text-sm">
+                  <p className="font-futura text-foreground/60 text-sm">
                     {avatar.description}
                   </p>
                 </div>

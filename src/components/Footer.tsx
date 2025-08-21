@@ -32,7 +32,7 @@ const Footer = () => {
                 ORCHESTRA
               </span>
             </div>
-            <p className="font-futura text-muted-foreground leading-relaxed max-w-md mb-6">
+            <p className="font-futura text-primary-foreground/80 leading-relaxed max-w-md mb-6">
               Criamos avatares de IA únicos que revolucionam a experiência digital das marcas mais inovadoras do mercado.
             </p>
             <div className="flex space-x-4">
@@ -40,10 +40,10 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-orchestra-gradient transition-all duration-300 group"
+                  className="w-10 h-10 bg-primary-foreground/10 border border-primary-foreground/20 rounded-full flex items-center justify-center hover:bg-orchestra-gradient hover:border-transparent transition-all duration-300 group"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-primary-foreground group-hover:text-primary-foreground" />
+                  <social.icon className="w-5 h-5 text-primary-foreground group-hover:text-black" />
                 </a>
               ))}
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <button
                   key={index}
                   onClick={() => scrollToSection(link.href)}
-                  className="block font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
+                  className="block font-futura text-primary-foreground/70 hover:text-accent transition-colors duration-200"
                 >
                   {link.label}
                 </button>
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="space-y-3">
               <a 
                 href="mailto:comercial@agenciaorchestra.ai"
-                className="flex items-center space-x-3 font-futura text-muted-foreground hover:text-accent transition-colors duration-200"
+                className="flex items-center space-x-3 font-futura text-primary-foreground/70 hover:text-accent transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
                 <span>comercial@agenciaorchestra.ai</span>
@@ -87,14 +87,14 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-futura text-muted-foreground text-sm">
+            <p className="font-futura text-primary-foreground/60 text-sm">
               © 2024 Orchestra. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="font-futura text-muted-foreground hover:text-primary-foreground text-sm transition-colors duration-200">
+              <a href="#" className="font-futura text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors duration-200">
                 Política de Privacidade
               </a>
-              <a href="#" className="font-futura text-muted-foreground hover:text-primary-foreground text-sm transition-colors duration-200">
+              <a href="#" className="font-futura text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors duration-200">
                 Termos de Uso
               </a>
             </div>
