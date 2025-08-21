@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import AboutWhoWeAreSection from '@/components/about/AboutWhoWeAreSection';
 import AboutServicesSection from '@/components/about/AboutServicesSection';
 import AboutBenefitsSection from '@/components/about/AboutBenefitsSection';
-import AboutProcessSection from '@/components/about/AboutProcessSection';
+
 import AboutTechSection from '@/components/about/AboutTechSection';
 import AboutCasesSection from '@/components/about/AboutCasesSection';
 import AboutImpactSection from '@/components/about/AboutImpactSection';
@@ -91,7 +91,7 @@ const AboutUs: React.FC = () => {
         <AboutWhoWeAreSection />
         <AboutServicesSection />
         <AboutBenefitsSection />
-        <AboutProcessSection />
+        
         <AboutTechSection />
         <AboutCasesSection />
         <AboutImpactSection />
