@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import heroAvatar from '@/assets/hero-avatar.jpg';
 
 const HeroSection = () => {
+  console.log('HeroSection rendering...');
   const scrollToServices = () => {
     const element = document.querySelector('#services');
     if (element) {
