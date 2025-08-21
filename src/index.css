@@ -110,26 +110,26 @@ Inspired by high-end fashion and luxury brands
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Futura', 'Futura PT', 'Futura Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 300;
     letter-spacing: 0.025em;
   }
 
-  /* Futura-inspired typography classes */
+  /* Futura typography classes */
   .font-futura {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Futura', 'Futura PT', 'Futura Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 300;
     letter-spacing: 0.05em;
   }
 
   .font-futura-light {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Futura', 'Futura PT', 'Futura Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 200;
     letter-spacing: 0.075em;
   }
 
   .font-futura-medium {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Futura', 'Futura PT', 'Futura Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: 0.05em;
   }
