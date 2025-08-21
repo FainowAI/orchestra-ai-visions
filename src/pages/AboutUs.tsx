@@ -10,6 +10,7 @@ import AboutCasesSection from '@/components/about/AboutCasesSection';
 import AboutImpactSection from '@/components/about/AboutImpactSection';
 import AboutCTASection from '@/components/about/AboutCTASection';
 import AboutFAQSection from '@/components/about/AboutFAQSection';
+import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const AboutUs: React.FC = () => {
@@ -62,6 +63,7 @@ const AboutUs: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background dark:bg-background">
+        <Navigation />
         <AboutHeroSection />
         <AboutWhoWeAreSection />
         <AboutServicesSection />

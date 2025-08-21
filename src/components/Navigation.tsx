@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +19,36 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'Início', href: '#hero' },
-    { label: 'Serviços', href: '#services' },
-    { label: 'Squad', href: '#squad' },
-    { label: 'Processo', href: '#process' },
-    { label: 'Portfólio', href: '#portfolio' },
-    { label: 'Contato', href: '#contact' }
+    { label: 'Início', href: '#hero', type: 'section' },
+    { label: 'Quem somos', href: '/quem-somos', type: 'page' },
+    { label: 'Serviços', href: '#services', type: 'section' },
+    { label: 'Squad', href: '#squad', type: 'section' },
+    { label: 'Processo', href: '#process', type: 'section' },
+    { label: 'Portfólio', href: '#portfolio', type: 'section' },
+    { label: 'Contato', href: '#contact', type: 'section' }
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: { label: string; href: string; type: string }) => {
+    if (item.type === 'page') {
+      navigate(item.href);
+    } else if (item.type === 'section') {
+      // Se estamos em outra página que não seja home, navegar para home primeiro
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Aguardar um momento para a página carregar e então fazer scroll
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        // Se já estamos na home, fazer scroll direto
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -40,11 +61,14 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className={`font-futura-light text-2xl tracking-widest transition-colors duration-200 ${
-              isScrolled ? 'text-primary' : 'text-white'
-            }`}>
+            <button
+              onClick={() => navigate('/')}
+              className={`font-futura-light text-2xl tracking-widest transition-colors duration-200 hover:opacity-80 ${
+                isScrolled ? 'text-primary' : 'text-white'
+              }`}
+            >
               ORCHESTRA
-            </span>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -53,7 +77,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item)}
                   className={`font-futura text-sm tracking-wide transition-colors duration-200 ${
                     isScrolled 
                       ? 'text-foreground/70 hover:text-primary' 
@@ -91,7 +115,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="block font-futura text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {item.label}
