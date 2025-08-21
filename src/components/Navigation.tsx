@@ -55,7 +55,9 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      isScrolled || location.pathname !== '/' 
+        ? 'bg-background/95 backdrop-blur-md border-b border-border' 
+        : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -64,7 +66,9 @@ const Navigation = () => {
             <button
               onClick={() => navigate('/')}
               className={`font-futura-light text-2xl tracking-widest transition-colors duration-200 hover:opacity-80 ${
-                isScrolled ? 'text-primary' : 'text-white'
+                isScrolled || location.pathname !== '/' 
+                  ? 'text-primary' 
+                  : 'text-white'
               }`}
             >
               ORCHESTRA
@@ -79,7 +83,7 @@ const Navigation = () => {
                   key={item.label}
                   onClick={() => handleNavigation(item)}
                   className={`font-futura text-sm tracking-wide transition-colors duration-200 ${
-                    isScrolled 
+                    isScrolled || location.pathname !== '/'
                       ? 'text-foreground/70 hover:text-primary' 
                       : 'text-white/90 hover:text-white'
                   }`}
@@ -97,7 +101,7 @@ const Navigation = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`transition-colors duration-200 ${
-                isScrolled 
+                isScrolled || location.pathname !== '/'
                   ? 'text-primary hover:text-accent' 
                   : 'text-white hover:text-white/80'
               }`}
