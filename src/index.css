@@ -147,54 +147,86 @@ Inspired by high-end fashion and luxury brands
     scroll-behavior: smooth;
   }
 
-  /* Custom animations */
+  /* Luxury animations enhanced by anime.js */
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: luxuryFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
+    animation: luxurySlideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.6s ease-out forwards;
+    animation: luxuryScaleIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideUp {
+  @keyframes luxuryFadeIn {
     from { 
       opacity: 0; 
-      transform: translateY(30px); 
+      filter: blur(10px);
     }
     to { 
       opacity: 1; 
-      transform: translateY(0); 
+      filter: blur(0);
     }
   }
 
-  @keyframes scaleIn {
+  @keyframes luxurySlideUp {
     from { 
       opacity: 0; 
-      transform: scale(0.95); 
+      transform: translateY(60px) scale(0.95); 
     }
     to { 
       opacity: 1; 
-      transform: scale(1); 
+      transform: translateY(0) scale(1); 
     }
   }
 
-  /* Luxury hover effects */
+  @keyframes luxuryScaleIn {
+    from { 
+      opacity: 0; 
+      transform: scale(0.8) rotate(-5deg); 
+    }
+    50% {
+      transform: scale(1.05) rotate(2deg);
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1) rotate(0deg); 
+    }
+  }
+
+  /* Premium hover effects */
   .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05);
+  }
+
+  /* Elegant button hover */
+  .btn-luxury {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-luxury:hover::before {
+    left: 100%;
   }
 
   /* Full-screen no margins layout */
