@@ -96,13 +96,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
+    <section id="hero" className="relative w-screen h-screen overflow-hidden">
+      {/* Background Video - Full bleed */}
       <div className="absolute inset-0 z-0">
-        
         <video 
           ref={videoRef}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover"
           autoPlay 
           loop 
           muted 
@@ -114,75 +113,64 @@ const HeroSection = () => {
           onCanPlay={() => console.log('🎬 Vídeo pode ser reproduzido!')}
         >
           <source src="/background-video.mp4" type="video/mp4" />
-          {/* Fallback para imagem se vídeo não carregar */}
           <img 
             src={heroFallback} 
             alt="Avatar Digital da Orchestra"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
           />
         </video>
-        <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      {/* Content */}
+      {/* Minimal Content Overlay */}
       <motion.div 
-        className="relative z-10 text-center max-w-4xl mx-auto px-6"
+        className="absolute inset-0 z-10 flex flex-col justify-center items-start px-16 lg:px-24"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <div>
+        <div className="max-w-2xl">
           <motion.h1 
             variants={titleVariants}
-            className="font-futura-light text-6xl md:text-8xl lg:text-9xl text-white mb-8 tracking-widest cursor-pointer"
-            whileHover={{ 
-              scale: 1.05,
-              transition: { type: "spring", damping: 15, stiffness: 400 }
-            }}
+            className="font-futura-light text-7xl md:text-8xl lg:text-9xl text-white mb-6 tracking-[0.2em] leading-none"
           >
             ORCHESTRA
           </motion.h1>
           
-          <motion.div 
-            variants={separatorVariants}
-            className="w-24 h-px bg-orchestra-gradient mx-auto mb-8"
-            style={{ transformOrigin: 'center' }}
-          />
-          
           <motion.p 
             variants={itemVariants}
-            className="font-futura text-xl md:text-2xl text-white/90 mb-12 tracking-wide leading-relaxed max-w-3xl mx-auto"
+            className="font-futura text-xl md:text-2xl text-white/80 mb-16 tracking-wide leading-relaxed max-w-lg font-light"
           >
-            Criamos avatares de IA únicos e personalizados que revolucionam
+            Criatividade digital sem limites.
             <br />
-            a forma como as marcas se conectam com seu público
+            Avatares de IA que transformam marcas.
           </motion.p>
 
           <motion.div variants={itemVariants}>
             <Button 
               onClick={scrollToServices}
-              variant="outline" 
+              variant="ghost" 
               size="lg"
-              className="font-futura tracking-wide bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-3 hover:scale-105"
+              className="font-futura tracking-widest bg-transparent border-none text-white hover:bg-white/10 transition-all duration-500 px-0 py-6 text-lg uppercase underline decoration-1 underline-offset-8 hover:decoration-2"
             >
-              Descobrir Como
+              Explorar
             </Button>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
+      {/* Minimal Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-12 right-16 lg:right-24"
         variants={floatingVariants}
         initial="animate"
         animate="animate"
       >
         <button 
           onClick={scrollToServices}
-          className="text-white/80 hover:text-white transition-colors duration-200 hover:scale-110"
+          className="text-white/60 hover:text-white transition-all duration-300 text-sm font-futura tracking-widest uppercase writing-mode-vertical-rl"
         >
-          <ChevronDown size={32} />
+          Scroll
         </button>
       </motion.div>
     </section>

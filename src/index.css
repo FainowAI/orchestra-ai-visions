@@ -236,4 +236,22 @@ Inspired by high-end fashion and luxury brands
     width: 100vw;
     min-height: 100vh;
   }
+
+  /* Editorial layout utilities */
+  .writing-mode-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Minimal editorial spacing */
+  .editorial-spacing {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Full-bleed sections */
+  .full-bleed {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
 }

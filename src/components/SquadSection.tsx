@@ -1,127 +1,99 @@
-import { Button } from '@/components/ui/button';
 import avatar1 from '@/assets/avatar-1.jpg';
 import avatar2 from '@/assets/avatar-2.jpg';
 import avatar3 from '@/assets/avatar-3.jpg';
-import { useRef } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { sectionEntrance, slideInStagger, luxuryHover, luxuryHoverOut } from '@/utils/animations';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const SquadSection = () => {
-  const cardsRef = useRef<HTMLDivElement[]>([]);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [hoveredModel, setHoveredModel] = useState<number | null>(null);
 
-  const sectionRef = useScrollAnimation(() => {
-    // Animate section entrance
-    sectionEntrance('.squad-title', '.squad-separator', '.squad-subtitle');
-    
-    // Animate avatar cards with stagger
-    slideInStagger(cardsRef.current, 200);
-    
-    // Animate button
-    setTimeout(() => {
-      if (buttonRef.current) {
-        luxuryHover(buttonRef.current);
-        setTimeout(() => luxuryHoverOut(buttonRef.current), 300);
-      }
-    }, 1000);
-  });
-
-  const avatars = [
+  const models = [
     {
       id: 1,
-      name: "Alex Corporate",
-      category: "Executivo Digital",
-      image: avatar1,
-      description: "Avatar corporativo para liderança empresarial"
+      name: "ALEX",
+      image: avatar1
     },
     {
       id: 2,
-      name: "Maya Creative",
-      category: "Artista Digital",
-      image: avatar2,
-      description: "Avatar criativo para marcas inovadoras"
+      name: "MAYA",
+      image: avatar2
     },
     {
       id: 3,
-      name: "Tech Oliver",
-      category: "Especialista Tech",
-      image: avatar3,
-      description: "Avatar especializado em tecnologia"
+      name: "OLIVER",
+      image: avatar3
     }
   ];
 
   return (
-    <section ref={sectionRef} id="squad" className="py-24 bg-secondary">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="squad-title font-futura-light text-5xl md:text-6xl text-primary mb-6 tracking-widest opacity-0">
-            NOSSO SQUAD
-          </h2>
-          <div className="squad-separator w-24 h-px bg-orchestra-gradient mx-auto mb-8 opacity-0" style={{ transformOrigin: 'center' }}></div>
-          <p className="squad-subtitle font-futura text-xl text-foreground/70 max-w-3xl mx-auto tracking-wide opacity-0">
-            Conheça alguns dos avatares de IA que criamos
-            <br />
-            para revolucionar a presença digital das marcas
-          </p>
-        </div>
+    <section id="squad" className="w-screen min-h-screen bg-background">
+      {/* Editorial Title */}
+      <div className="px-16 lg:px-24 py-16">
+        <motion.h2 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="font-futura-light text-6xl md:text-7xl lg:text-8xl text-primary tracking-[0.2em] leading-none mb-8"
+        >
+          NOSSOS
+          <br />
+          MODELOS
+        </motion.h2>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-futura text-lg text-foreground/60 max-w-lg font-light tracking-wide"
+        >
+          Uma seleção de avatares digitais criados para redefinir a presença visual das marcas mais visionárias.
+        </motion.p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {avatars.map((avatar, index) => (
-            <div 
-              key={avatar.id}
-              ref={(el) => { if (el) cardsRef.current[index] = el; }}
-              className="group cursor-pointer opacity-0"
-              onMouseEnter={(e) => luxuryHover(e.currentTarget)}
-              onMouseLeave={(e) => luxuryHoverOut(e.currentTarget)}
-            >
-              <div className="relative overflow-hidden rounded-lg bg-card shadow-lg hover:shadow-2xl transition-shadow duration-500">
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={avatar.image} 
-                    alt={avatar.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-                
-                <div className="p-6">
-                  <div className="mb-2">
-                    <span className="font-futura text-sm text-accent tracking-wide uppercase">
-                      {avatar.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="font-futura-medium text-xl text-primary mb-2 tracking-wide">
-                    {avatar.name}
-                  </h3>
-                  
-                  <p className="font-futura text-foreground/60 text-sm">
-                    {avatar.description}
-                  </p>
-                </div>
-
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-orchestra-gradient opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center">
-                  <span className="font-futura text-primary-foreground tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Ver Detalhes
-                  </span>
-                </div>
+      {/* Full-width Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 h-auto">
+        {models.map((model, index) => (
+          <motion.div 
+            key={model.id}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            className="relative group cursor-pointer"
+            onMouseEnter={() => setHoveredModel(model.id)}
+            onMouseLeave={() => setHoveredModel(null)}
+          >
+            <div className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+              <img 
+                src={model.image} 
+                alt={model.name}
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+              />
+              
+              {/* Minimal overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+              
+              {/* Model name */}
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <motion.h3 
+                  initial={{ opacity: 0.7 }}
+                  animate={{ 
+                    opacity: hoveredModel === model.id ? 1 : 0.7,
+                    y: hoveredModel === model.id ? -10 : 0
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="font-futura-light text-4xl md:text-5xl text-white tracking-[0.3em] leading-none"
+                >
+                  {model.name}
+                </motion.h3>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Button 
-            ref={buttonRef}
-            variant="outline"
-            size="lg"
-            className="font-futura tracking-wide border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 opacity-0"
-            onMouseEnter={(e) => luxuryHover(e.currentTarget)}
-            onMouseLeave={(e) => luxuryHoverOut(e.currentTarget)}
-          >
-            Ver Todos os Avatares
-          </Button>
-        </div>
+            
+            {/* Vertical divider (except last item) */}
+            {index < models.length - 1 && (
+              <div className="hidden md:block absolute top-0 right-0 w-px h-full bg-border/30" />
+            )}
+          </motion.div>
+        ))}
       </div>
     </section>
   );

@@ -1,69 +1,89 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CTASection = () => {
   return (
-    <section id="contact" className="py-24 bg-orchestra-gradient">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <div className="animate-fade-in">
-          {/* Icon */}
-          <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Sparkles className="w-10 h-10 text-white" />
+    <section id="contact" className="w-screen min-h-screen bg-primary flex items-center justify-center">
+      <div className="max-w-6xl mx-auto px-16 lg:px-24 text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          {/* Content */}
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-futura-light text-6xl md:text-7xl lg:text-8xl text-white mb-8 tracking-[0.2em] leading-none"
+            >
+              VAMOS
+              <br />
+              CRIAR
+              <br />
+              JUNTOS?
+            </motion.h2>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-futura text-xl text-white/70 mb-12 font-light tracking-wide leading-relaxed max-w-lg"
+            >
+              Transforme sua visão em realidade digital. 
+              Criamos experiências visuais que redefinem o futuro das marcas.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-4"
+            >
+              <Button 
+                size="lg"
+                className="font-futura tracking-widest bg-white text-black hover:bg-white/90 transition-all duration-500 px-12 py-6 text-lg uppercase"
+              >
+                Começar Projeto
+              </Button>
+              
+              <div className="block">
+                <Button 
+                  variant="ghost"
+                  size="lg"
+                  className="font-futura tracking-widest bg-transparent border-none text-white/60 hover:text-white hover:bg-transparent transition-all duration-500 px-0 py-6 text-lg uppercase underline decoration-1 underline-offset-8"
+                >
+                  Ver Portfolio
+                </Button>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Headline */}
-          <h2 className="font-futura-light text-5xl md:text-6xl text-white mb-6 tracking-widest">
-            PRONTO PARA REVOLUCIONAR
-            <br />
-            SUA MARCA?
-          </h2>
-
-          <div className="w-24 h-px bg-white/50 mx-auto mb-8"></div>
-
-          {/* Description */}
-          <p className="font-futura text-xl md:text-2xl text-white/90 mb-12 tracking-wide leading-relaxed max-w-3xl mx-auto">
-            Crie um avatar de IA único que transforme
-            <br />
-            a experiência digital da sua marca
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg"
-              className="font-futura tracking-wide bg-white text-black hover:bg-white/90 transition-all duration-300 px-8 py-4 text-lg"
-            >
-              Começar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            
-            <Button 
-              variant="outline"
-              size="lg"
-              className="font-futura tracking-wide bg-transparent border-2 border-white text-white hover:bg-white/10 transition-all duration-300 px-8 py-4 text-lg"
-            >
-              Entre em contato
-            </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 pt-8 border-t border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="font-futura-medium text-3xl text-white mb-2">50+</div>
-                <div className="font-futura text-white/80 text-sm tracking-wide">Avatares Criados</div>
-              </div>
-              <div>
-                <div className="font-futura-medium text-3xl text-white mb-2">98%</div>
-                <div className="font-futura text-white/80 text-sm tracking-wide">Satisfação Cliente</div>
-              </div>
-              <div>
-                <div className="font-futura-medium text-3xl text-white mb-2">24h</div>
-                <div className="font-futura text-white/80 text-sm tracking-wide">Tempo Resposta</div>
-              </div>
+          {/* Statistics */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="border-l border-white/20 pl-8">
+              <div className="font-futura-light text-5xl text-white mb-2 tracking-wide">50+</div>
+              <div className="font-futura text-white/60 text-sm tracking-widest uppercase">Projetos Criados</div>
             </div>
-          </div>
-        </div>
+            
+            <div className="border-l border-white/20 pl-8">
+              <div className="font-futura-light text-5xl text-white mb-2 tracking-wide">98%</div>
+              <div className="font-futura text-white/60 text-sm tracking-widest uppercase">Satisfação</div>
+            </div>
+            
+            <div className="border-l border-white/20 pl-8">
+              <div className="font-futura-light text-5xl text-white mb-2 tracking-wide">24h</div>
+              <div className="font-futura text-white/60 text-sm tracking-widest uppercase">Resposta</div>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
