@@ -1,101 +1,92 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const AboutCTASection: React.FC = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent via-accent/90 to-accent/80"></div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-      
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Main content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Icon */}
-            <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <Sparkles className="w-10 h-10 text-white" />
-            </div>
-            
-            {/* Title */}
-            <h2 className="font-futura-light text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight tracking-widest">
-              PRONTO PARA REVOLUCIONAR
-              <span className="block">SUA MARCA?</span>
-            </h2>
-            
-            {/* Description */}
-            <motion.p
+    <section className="w-screen min-h-screen bg-primary flex items-center justify-center">
+      <div className="max-w-6xl mx-auto px-16 lg:px-24 text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          {/* Content */}
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-futura-light text-6xl md:text-7xl lg:text-8xl text-white mb-8 tracking-[0.2em] leading-none"
+            >
+              VAMOS
+              <br />
+              CRIAR
+              <br />
+              JUNTOS?
+            </motion.h2>
+
+            <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-futura text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-futura text-xl text-white/70 mb-12 font-light tracking-wide leading-relaxed max-w-lg"
             >
-              Crie avatares digitais hiper-realistas que transformam
-              <br />
-              a experiência digital da sua marca
+              Sua visão merece se tornar realidade digital. 
+              Criamos experiências que transcendem o comum.
             </motion.p>
-          </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-          >
-            <Button
-              size="lg"
-              className="bg-white text-accent hover:bg-white/90 font-futura font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl group"
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-4"
             >
-              Solicitar proposta
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-futura font-medium px-8 py-4 rounded-2xl transition-all duration-300"
-            >
-              Ver nosso portfólio
-            </Button>
-          </motion.div>
+              <Button 
+                size="lg"
+                className="font-futura tracking-widest bg-white text-black hover:bg-white/90 transition-all duration-500 px-12 py-6 text-lg uppercase"
+              >
+                Solicitar Proposta
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              
+              <div className="block">
+                <Button 
+                  variant="ghost"
+                  size="lg"
+                  className="font-futura tracking-widest bg-transparent border-none text-white/60 hover:text-white hover:bg-transparent transition-all duration-500 px-0 py-6 text-lg uppercase underline decoration-1 underline-offset-8"
+                >
+                  Ver Portfólio
+                </Button>
+              </div>
+            </motion.div>
+          </div>
 
-          {/* Additional info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
+          {/* Contact Info */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="space-y-12"
           >
-            <div className="text-center">
-              <h4 className="font-futura font-semibold text-white mb-2">Proposta Gratuita</h4>
-              <p className="font-futura text-white/80 text-sm">Análise completa sem compromisso</p>
+            <div className="border-l border-white/20 pl-8">
+              <h3 className="font-futura text-white/90 text-sm tracking-widest uppercase mb-2">Proposta Gratuita</h3>
+              <p className="font-futura text-white/60 text-sm font-light">Análise completa sem compromisso</p>
             </div>
             
-            <div className="text-center">
-              <h4 className="font-futura font-semibold text-white mb-2">Entrega Rápida</h4>
-              <p className="font-futura text-white/80 text-sm">Primeiros resultados em até 2 semanas</p>
+            <div className="border-l border-white/20 pl-8">
+              <h3 className="font-futura text-white/90 text-sm tracking-widest uppercase mb-2">Entrega Rápida</h3>
+              <p className="font-futura text-white/60 text-sm font-light">Primeiros resultados em 2 semanas</p>
             </div>
             
-            <div className="text-center">
-              <h4 className="font-futura font-semibold text-white mb-2">Suporte Total</h4>
-              <p className="font-futura text-white/80 text-sm">Acompanhamento durante todo projeto</p>
+            <div className="border-l border-white/20 pl-8">
+              <h3 className="font-futura text-white/90 text-sm tracking-widest uppercase mb-2">Suporte Total</h3>
+              <p className="font-futura text-white/60 text-sm font-light">Acompanhamento especializado</p>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

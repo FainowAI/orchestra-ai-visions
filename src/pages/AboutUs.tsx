@@ -1,13 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import AboutWhoWeAreSection from '@/components/about/AboutWhoWeAreSection';
-import AboutServicesSection from '@/components/about/AboutServicesSection';
-import AboutBenefitsSection from '@/components/about/AboutBenefitsSection';
-import AboutTechSection from '@/components/about/AboutTechSection';
 import AboutCasesSection from '@/components/about/AboutCasesSection';
-import AboutImpactSection from '@/components/about/AboutImpactSection';
 import AboutCTASection from '@/components/about/AboutCTASection';
-import AboutFAQSection from '@/components/about/AboutFAQSection';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -88,13 +83,8 @@ const AboutUs: React.FC = () => {
       <div className="min-h-screen bg-background dark:bg-background">
         <Navigation />
         <AboutWhoWeAreSection />
-        <AboutServicesSection />
-        <AboutBenefitsSection />
-        <AboutTechSection />
         <AboutCasesSection />
-        <AboutImpactSection />
         <AboutCTASection />
-        <AboutFAQSection />
         <Footer />
       </div>
     </>
