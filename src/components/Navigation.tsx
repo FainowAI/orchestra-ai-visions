@@ -2,51 +2,20 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
+import logoOrchestra from '@/assets/logo.png';
 
 // Componente do Logo Orchestra
 const OrchestraLogo = ({ isScrolled, isHomePage }: { isScrolled: boolean; isHomePage: boolean }) => {
   const textColor = isScrolled || !isHomePage ? 'text-primary' : 'text-white';
-  const logoColor = isScrolled || !isHomePage ? '#0f172a' : '#ffffff'; // primary para scrolled, branco para transparent
   
   return (
     <div className="flex items-center space-x-3">
       {/* Logo gráfico */}
-      <svg 
-        width="40" 
-        height="40" 
-        viewBox="0 0 40 40" 
-        className="flex-shrink-0"
-      >
-        {/* Semicírculo dourado com segmentos */}
-        <defs>
-          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#fbbf24', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
-          </linearGradient>
-        </defs>
-        
-        {/* Semicírculo base */}
-        <path 
-          d="M20 35 A15 15 0 0 1 5 20 A15 15 0 0 1 35 20 A15 15 0 0 1 20 35 Z" 
-          fill="none" 
-          stroke="url(#goldGradient)" 
-          strokeWidth="1.5"
-        />
-        
-        {/* Segmentos radiais */}
-        <path d="M20 20 L20 35" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        <path d="M20 20 L15 25" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        <path d="M20 20 L25 25" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        <path d="M20 20 L12 28" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        <path d="M20 20 L28 28" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        
-        {/* Segmentos curvos */}
-        <path d="M5 20 A15 15 0 0 1 20 35" fill="none" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        <path d="M20 35 A15 15 0 0 1 35 20" fill="none" stroke="url(#goldGradient)" strokeWidth="1.5" />
-        
-        {/* Linha horizontal base */}
-        <line x1="5" y1="35" x2="35" y2="35" stroke="url(#goldGradient)" strokeWidth="1.5" />
-      </svg>
+      <img 
+        src={logoOrchestra} 
+        alt="Orchestra Logo" 
+        className="w-10 h-10 flex-shrink-0"
+      />
       
       {/* Texto ORCHESTRA */}
       <span className={`font-futura-light text-2xl tracking-widest transition-colors duration-200 ${textColor}`}>
@@ -142,13 +111,13 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <ThemeToggle />
+              <ThemeToggle variant={isScrolled || !isHomePage ? 'default' : 'white'} />
             </div>
           </div>
 
           {/* Mobile menu button and theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+            <ThemeToggle variant={isScrolled || !isHomePage ? 'default' : 'white'} />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`transition-colors duration-200 ${

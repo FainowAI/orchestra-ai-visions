@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import heroAvatar from '@/assets/hero-avatar.jpg';
+import heroFallback from '@/assets/avatar-2.jpg';
 import { useEffect, useRef } from 'react';
 
 const HeroSection = () => {
@@ -99,10 +99,6 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {/* Debug: indicador visual */}
-        <div className="absolute top-4 left-4 z-20 bg-black/80 text-white px-3 py-1 rounded text-sm">
-          🎬 Carregando vídeo...
-        </div>
         
         <video 
           ref={videoRef}
@@ -120,12 +116,12 @@ const HeroSection = () => {
           <source src="/background-video.mp4" type="video/mp4" />
           {/* Fallback para imagem se vídeo não carregar */}
           <img 
-            src={heroAvatar} 
+            src={heroFallback} 
             alt="Avatar Digital da Orchestra"
             className="w-full h-full object-cover object-center"
           />
         </video>
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
       </div>
 
       {/* Content */}
