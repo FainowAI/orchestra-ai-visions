@@ -3,6 +3,8 @@ import avatar2 from '@/assets/avatar-2.jpg';
 import avatar3 from '@/assets/avatar-3.jpg';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { generateSlug } from '@/lib/slug';
 
 const SquadSection = () => {
   const [hoveredModel, setHoveredModel] = useState<number | null>(null);
@@ -11,16 +13,19 @@ const SquadSection = () => {
     {
       id: 1,
       name: "ALEX",
+      slug: generateSlug("ALEX"),
       image: avatar1
     },
     {
       id: 2,
       name: "MAYA",
+      slug: generateSlug("MAYA"),
       image: avatar2
     },
     {
       id: 3,
       name: "OLIVER",
+      slug: generateSlug("OLIVER"),
       image: avatar3
     }
   ];
@@ -58,14 +63,17 @@ const SquadSection = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="relative group cursor-pointer"
+            className="relative group"
             onMouseEnter={() => setHoveredModel(model.id)}
             onMouseLeave={() => setHoveredModel(null)}
           >
-            <div className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+            <Link 
+              to={`/avatares/${model.slug}`}
+              className="block relative h-[70vh] md:h-[80vh] overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
               <img 
                 src={model.image} 
-                alt={model.name}
+                alt={`${model.name} - Avatar Digital`}
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
               
@@ -86,7 +94,7 @@ const SquadSection = () => {
                   {model.name}
                 </motion.h3>
               </div>
-            </div>
+            </Link>
             
             {/* Vertical divider (except last item) */}
             {index < models.length - 1 && (
