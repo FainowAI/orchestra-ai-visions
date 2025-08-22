@@ -1,6 +1,5 @@
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroAvatar from '@/assets/hero-avatar.jpg';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -77,13 +76,23 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroAvatar}
-          alt="Avatar Digital da Orchestra"
+        <video 
           className="w-full h-full object-cover object-center"
-        />
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          {/* Fallback para imagem se vídeo não carregar */}
+          <img 
+            src="/hero-avatar.jpg" 
+            alt="Avatar Digital da Orchestra"
+            className="w-full h-full object-cover object-center"
+          />
+        </video>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
