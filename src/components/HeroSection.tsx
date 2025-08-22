@@ -1,8 +1,30 @@
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import heroAvatar from '@/assets/hero-avatar.jpg';
+import { useEffect, useRef } from 'react';
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Debug: verificar se o vídeo carregou
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener('loadeddata', () => {
+        console.log('✅ Vídeo carregado com sucesso!');
+      });
+      
+      video.addEventListener('error', (e) => {
+        console.error('❌ Erro ao carregar vídeo:', e);
+      });
+      
+      video.addEventListener('canplay', () => {
+        console.log('🎬 Vídeo pode ser reproduzido!');
+      });
+    }
+  }, []);
+
   // Animation variants for Framer Motion
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,17 +99,28 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
+        {/* Debug: indicador visual */}
+        <div className="absolute top-4 left-4 z-20 bg-black/80 text-white px-3 py-1 rounded text-sm">
+          🎬 Carregando vídeo...
+        </div>
+        
         <video 
+          ref={videoRef}
           className="w-full h-full object-cover object-center"
           autoPlay 
           loop 
           muted 
           playsInline
+          preload="auto"
+          onLoadStart={() => console.log('🔄 Iniciando carregamento do vídeo...')}
+          onLoadedData={() => console.log('✅ Vídeo carregado com sucesso!')}
+          onError={(e) => console.error('❌ Erro no vídeo:', e)}
+          onCanPlay={() => console.log('🎬 Vídeo pode ser reproduzido!')}
         >
           <source src="/background-video.mp4" type="video/mp4" />
           {/* Fallback para imagem se vídeo não carregar */}
           <img 
-            src="/hero-avatar.jpg" 
+            src={heroAvatar} 
             alt="Avatar Digital da Orchestra"
             className="w-full h-full object-cover object-center"
           />
