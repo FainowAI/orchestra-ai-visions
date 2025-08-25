@@ -31,10 +31,15 @@ const AvatarProfile: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": avatar.name,
+    "jobTitle": avatar.subtitle,
     "alternateName": avatar.subtitle,
     "description": avatar.bio.join(' '),
     "url": `https://orchestra.ai/avatares/${avatar.slug}`,
     "image": avatar.heroImages[0],
+    "height": avatar.facts.find(f => f.label === "Altura")?.value || "[placeholder]",
+    "hairColor": avatar.facts.find(f => f.label === "Cabelo")?.value || "[placeholder]",
+    "eyeColor": avatar.facts.find(f => f.label === "Olhos")?.value || "[placeholder]",
+    "addressLocality": avatar.facts.find(f => f.label === "Origem")?.value || "[placeholder]",
     "worksFor": {
       "@type": "Organization",
       "name": "Orchestra",
@@ -46,7 +51,7 @@ const AvatarProfile: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{avatar.name} | Avatar Digital Orchestra</title>
+        <title>{avatar.name} — Avatar</title>
         <meta
           name="description"
           content={`Conheça ${avatar.name}, ${avatar.subtitle}. ${avatar.bio[0]}`}

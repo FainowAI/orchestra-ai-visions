@@ -55,36 +55,40 @@ export const avatarMockData = [
   },
   {
     id: 2,
-    name: "MAYA",
-    slug: generateSlug("MAYA"),
-    subtitle: "Fashion Icon & Creative Muse",
+    name: "Isabella Matos",
+    slug: "isabella-matos",
+    subtitle: "Avatar de IA — editorial • lifestyle • tech",
     bio: [
-      "Maya é a personificação da criatividade e versatilidade na modelagem digital. Com sua presença magnética e estilo único, ela transcende as fronteiras entre o real e o virtual.",
-      "Especializada em campanhas de alta costura e beauty, Maya traz uma perspectiva fresca e contemporânea para cada projeto, adaptando-se com naturalidade a diferentes estéticas.",
-      "Sua personalidade cativante e profissionalismo a tornaram referência no mercado de avatares digitais, sendo escolha preferida para marcas premium e campanhas inovadoras."
+      "Presença sofisticada com foco em campanhas editoriais e tech-lifestyle.",
+      "Direcionada a marcas inovadoras, moda premium e produtos digitais.",
+      "Disponível para imagens, vídeo e ativações digitais."
     ],
     facts: [
-      { label: "Origem", value: "Rio de Janeiro, Brasil" },
-      { label: "Idade", value: "23 anos" },
-      { label: "Altura", value: "1,72m" },
-      { label: "Cabelo", value: "Louro" },
-      { label: "Olhos", value: "Verdes" },
-      { label: "Idiomas", value: "Português, Inglês, Francês" }
+      { label: "Origem", value: "[placeholder]" },
+      { label: "Idade aparente", value: "[placeholder]" },
+      { label: "Altura", value: "[placeholder]" },
+      { label: "Cabelo", value: "[placeholder]" },
+      { label: "Olhos", value: "[placeholder]" },
+      { label: "Idiomas", value: "[placeholder]" }
     ],
     heroImages: [
-      "/placeholder-hero-maya-1.jpg",
-      "/placeholder-hero-maya-2.jpg",
-      "/placeholder-hero-maya-3.jpg"
+      "/placeholder-hero-isabella-1.jpg",
+      "/placeholder-hero-isabella-2.jpg",
+      "/placeholder-hero-isabella-3.jpg"
     ],
     gallery: [
-      "/placeholder-gallery-maya-1.jpg",
-      "/placeholder-gallery-maya-2.jpg",
-      "/placeholder-gallery-maya-3.jpg",
-      "/placeholder-gallery-maya-4.jpg",
-      "/placeholder-gallery-maya-5.jpg",
-      "/placeholder-gallery-maya-6.jpg",
-      "/placeholder-gallery-maya-7.jpg",
-      "/placeholder-gallery-maya-8.jpg"
+      "/placeholder-gallery-isabella-1.jpg",
+      "/placeholder-gallery-isabella-2.jpg",
+      "/placeholder-gallery-isabella-3.jpg",
+      "/placeholder-gallery-isabella-4.jpg",
+      "/placeholder-gallery-isabella-5.jpg",
+      "/placeholder-gallery-isabella-6.jpg",
+      "/placeholder-gallery-isabella-7.jpg",
+      "/placeholder-gallery-isabella-8.jpg",
+      "/placeholder-gallery-isabella-9.jpg",
+      "/placeholder-gallery-isabella-10.jpg",
+      "/placeholder-gallery-isabella-11.jpg",
+      "/placeholder-gallery-isabella-12.jpg"
     ]
   },
   {

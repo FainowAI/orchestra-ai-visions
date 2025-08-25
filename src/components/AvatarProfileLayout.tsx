@@ -45,10 +45,6 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
       {/* Breadcrumb */}
       <div className="px-6 lg:px-24 py-4">
         <nav className="font-futura text-sm tracking-wide text-foreground/60">
-          <Link to="/" className="hover:text-primary transition-colors">
-            Início
-          </Link>
-          <span className="mx-2">›</span>
           <Link to="/#squad" className="hover:text-primary transition-colors">
             Avatares
           </Link>
@@ -72,7 +68,9 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
               src={avatar.heroImages[currentHeroImage]}
               alt={`${avatar.name} - Imagem ${currentHeroImage + 1}`}
               className="w-full h-full object-cover"
+              loading="eager"
               fetchPriority="high"
+              decoding="async"
             />
           </motion.div>
 
@@ -133,17 +131,18 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
 
       {/* Bio Section */}
       <section className="px-6 lg:px-24 py-16 lg:py-24">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
             <h2 className="font-futura-light text-4xl md:text-5xl text-primary mb-8 tracking-wide">
               Sobre {avatar.name}
             </h2>
-            <div className="space-y-6 max-w-[70ch]">
+            <div className="space-y-6 max-w-[70ch] mx-auto">
               {avatar.bio.map((paragraph, index) => (
                 <p 
                   key={index}
@@ -198,7 +197,7 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
           
           <div className="relative">
             {/* Current Image */}
-            <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-lg">
+            <div className="aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-lg">
               <motion.img
                 key={currentGalleryImage}
                 initial={{ opacity: 0 }}
@@ -206,7 +205,7 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                 transition={{ duration: 0.6 }}
                 src={avatar.gallery[currentGalleryImage]}
                 alt={`${avatar.name} - Galeria ${currentGalleryImage + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-250 ease-out hover:scale-102"
                 loading="lazy"
                 decoding="async"
               />
@@ -262,7 +261,7 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                   <img
                     src={image}
                     alt={`${avatar.name} - Portfólio ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-250 ease-out group-hover:scale-102"
                     loading="lazy"
                     decoding="async"
                     style={{ contentVisibility: 'auto' }}
@@ -324,7 +323,7 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                     <img
                       src={otherAvatar.heroImages[0]}
                       alt={otherAvatar.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-250 ease-out group-hover:scale-102"
                       loading="lazy"
                     />
                   </div>

@@ -18,8 +18,8 @@ const SquadSection = () => {
     },
     {
       id: 2,
-      name: "MAYA",
-      slug: generateSlug("MAYA"),
+      name: "Isabella Matos",
+      slug: "isabella-matos",
       image: avatar2
     },
     {
