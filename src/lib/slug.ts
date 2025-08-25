@@ -55,40 +55,39 @@ export const avatarMockData = [
   },
   {
     id: 2,
-    name: "Isabella Matos",
-    slug: "isabella-matos",
-    subtitle: "Avatar de IA — editorial • lifestyle • tech",
+    name: "Isabela Matos",
+    slug: "isabela-matos",
+    subtitle: "Avatar de IA | Natureza, Bem-estar e Moda Sustentável",
     bio: [
-      "Presença sofisticada com foco em campanhas editoriais e tech-lifestyle.",
-      "Direcionada a marcas inovadoras, moda premium e produtos digitais.",
-      "Disponível para imagens, vídeo e ativações digitais."
+      "Isabela representa a nova geração de avatares de IA com propósito: alma carioca, raízes nordestinas e presença serena. Focada em causas ambientais, bem-estar, arte e moda sustentável, une estética natural com narrativa brasileira autêntica.",
+      "Vegetariana, formada em Artes Cênicas (UFRJ), prefere exemplo a discurso e cria conteúdo atemporal, elegante e conectado à natureza — ideal para marcas que buscam propósito, estética limpa e responsabilidade socioambiental."
     ],
     facts: [
-      { label: "Origem", value: "[placeholder]" },
-      { label: "Idade aparente", value: "[placeholder]" },
-      { label: "Altura", value: "[placeholder]" },
-      { label: "Cabelo", value: "[placeholder]" },
-      { label: "Olhos", value: "[placeholder]" },
-      { label: "Idiomas", value: "[placeholder]" }
+      { label: "ORIGEM", value: "Rio de Janeiro (RJ) • vivência em São Luís (MA)" },
+      { label: "IDADE", value: "27 anos" },
+      { label: "ALTURA", value: "—" },
+      { label: "CABELO", value: "castanho-escuro ondulado (franja suave)" },
+      { label: "OLHOS", value: "verde-claros" },
+      { label: "IDIOMAS", value: "—" }
     ],
     heroImages: [
-      "/placeholder-hero-isabella-1.jpg",
-      "/placeholder-hero-isabella-2.jpg",
-      "/placeholder-hero-isabella-3.jpg"
+      "/placeholder-hero-isabela-1.jpg",
+      "/placeholder-hero-isabela-2.jpg",
+      "/placeholder-hero-isabela-3.jpg"
     ],
     gallery: [
-      "/placeholder-gallery-isabella-1.jpg",
-      "/placeholder-gallery-isabella-2.jpg",
-      "/placeholder-gallery-isabella-3.jpg",
-      "/placeholder-gallery-isabella-4.jpg",
-      "/placeholder-gallery-isabella-5.jpg",
-      "/placeholder-gallery-isabella-6.jpg",
-      "/placeholder-gallery-isabella-7.jpg",
-      "/placeholder-gallery-isabella-8.jpg",
-      "/placeholder-gallery-isabella-9.jpg",
-      "/placeholder-gallery-isabella-10.jpg",
-      "/placeholder-gallery-isabella-11.jpg",
-      "/placeholder-gallery-isabella-12.jpg"
+      "/placeholder-gallery-isabela-1.jpg",
+      "/placeholder-gallery-isabela-2.jpg",
+      "/placeholder-gallery-isabela-3.jpg",
+      "/placeholder-gallery-isabela-4.jpg",
+      "/placeholder-gallery-isabela-5.jpg",
+      "/placeholder-gallery-isabela-6.jpg",
+      "/placeholder-gallery-isabela-7.jpg",
+      "/placeholder-gallery-isabela-8.jpg",
+      "/placeholder-gallery-isabela-9.jpg",
+      "/placeholder-gallery-isabela-10.jpg",
+      "/placeholder-gallery-isabela-11.jpg",
+      "/placeholder-gallery-isabela-12.jpg"
     ]
   },
   {

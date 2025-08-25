@@ -51,23 +51,38 @@ const AvatarProfile: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{avatar.name} — Avatar</title>
+        <title>{avatar.slug === 'isabela-matos' ? 'Isabela Matos – Avatar de IA | Natureza, Bem-estar e Moda Sustentável' : `${avatar.name} — Avatar`}</title>
         <meta
           name="description"
-          content={`Conheça ${avatar.name}, ${avatar.subtitle}. ${avatar.bio[0]}`}
+          content={avatar.slug === 'isabela-matos' 
+            ? 'Avatar da Orchestra com alma carioca e raízes nordestinas. Parcerias em causas ambientais, bem-estar, arte e moda sustentável. Contato comercial via WhatsApp.'
+            : `Conheça ${avatar.name}, ${avatar.subtitle}. ${avatar.bio[0]}`
+          }
         />
         <meta name="keywords" content={`${avatar.name}, avatar digital, modelo virtual, IA generativa, Orchestra`} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={`${avatar.name} | Avatar Digital Orchestra`} />
-        <meta property="og:description" content={`Conheça ${avatar.name}, ${avatar.subtitle}.`} />
+        <meta property="og:title" content={avatar.slug === 'isabela-matos' 
+          ? 'Isabela Matos – Avatar de IA | Natureza, Bem-estar e Moda Sustentável'
+          : `${avatar.name} | Avatar Digital Orchestra`
+        } />
+        <meta property="og:description" content={avatar.slug === 'isabela-matos'
+          ? 'Avatar da Orchestra com alma carioca e raízes nordestinas. Parcerias em causas ambientais, bem-estar, arte e moda sustentável.'
+          : `Conheça ${avatar.name}, ${avatar.subtitle}.`
+        } />
         <meta property="og:image" content={avatar.heroImages[0]} />
         <meta property="og:url" content={`https://orchestra.ai/avatares/${avatar.slug}`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${avatar.name} | Avatar Digital Orchestra`} />
-        <meta name="twitter:description" content={`Conheça ${avatar.name}, ${avatar.subtitle}.`} />
+        <meta name="twitter:title" content={avatar.slug === 'isabela-matos'
+          ? 'Isabela Matos – Avatar de IA | Natureza, Bem-estar e Moda Sustentável'
+          : `${avatar.name} | Avatar Digital Orchestra`
+        } />
+        <meta name="twitter:description" content={avatar.slug === 'isabela-matos'
+          ? 'Avatar da Orchestra com alma carioca e raízes nordestinas. Parcerias em causas ambientais, bem-estar, arte e moda sustentável.'
+          : `Conheça ${avatar.name}, ${avatar.subtitle}.`
+        } />
         <meta name="twitter:image" content={avatar.heroImages[0]} />
         
         <script type="application/ld+json">

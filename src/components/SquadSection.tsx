@@ -19,8 +19,8 @@ const SquadSection = () => {
     },
     {
       id: 2,
-      name: "Isabella Matos",
-      slug: "isabella-matos",
+      name: "Isabela Matos",
+      slug: "isabela-matos",
       image: avatar2
     },
     {

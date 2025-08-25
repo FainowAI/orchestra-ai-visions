@@ -21,7 +21,6 @@ interface AvatarProfileLayoutProps {
 
 const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => {
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
-  const [currentGalleryImage, setCurrentGalleryImage] = useState(0);
   const otherAvatars = getOtherAvatars(avatar.slug);
 
   const nextHeroImage = () => {
@@ -30,14 +29,6 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
 
   const prevHeroImage = () => {
     setCurrentHeroImage((prev) => (prev - 1 + avatar.heroImages.length) % avatar.heroImages.length);
-  };
-
-  const nextGalleryImage = () => {
-    setCurrentGalleryImage((prev) => (prev + 1) % avatar.gallery.length);
-  };
-
-  const prevGalleryImage = () => {
-    setCurrentGalleryImage((prev) => (prev - 1 + avatar.gallery.length) % avatar.gallery.length);
   };
 
   return (
@@ -183,60 +174,90 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
         </motion.div>
       </section>
 
-      {/* Gallery Slider */}
+      {/* Posicionamento & Proposta de Valor */}
       <section className="px-6 lg:px-24 py-16 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
         >
           <h3 className="font-futura-light text-4xl md:text-5xl text-primary mb-12 tracking-wide">
-            Galeria Principal
+            Posicionamento & Proposta de Valor
           </h3>
-          
-          <div className="relative">
-            {/* Current Image */}
-            <div className="aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-lg">
-              <motion.img
-                key={currentGalleryImage}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                src={avatar.gallery[currentGalleryImage]}
-                alt={`${avatar.name} - Galeria ${currentGalleryImage + 1}`}
-                className="w-full h-full object-cover transition-transform duration-250 ease-out hover:scale-102"
-                loading="lazy"
-                decoding="async"
-              />
+          <div className="space-y-8">
+            <div className="bg-accent/5 p-8 rounded-lg">
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Função
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Influencer de IA para ambiental, bem-estar, arte e moda sustentável.
+              </p>
             </div>
-
-            {/* Gallery Navigation */}
-            {avatar.gallery.length > 1 && (
-              <div className="flex justify-between items-center mt-6">
-                <button
-                  onClick={prevGalleryImage}
-                  className="font-futura text-foreground/60 hover:text-primary transition-colors tracking-widest text-sm uppercase"
-                >
-                  Anterior
-                </button>
-                <span className="font-futura text-sm text-foreground/60 tracking-wide">
-                  {currentGalleryImage + 1} / {avatar.gallery.length}
-                </span>
-                <button
-                  onClick={nextGalleryImage}
-                  className="font-futura text-foreground/60 hover:text-primary transition-colors tracking-widest text-sm uppercase"
-                >
-                  Próxima
-                </button>
-              </div>
-            )}
+            <div className="bg-accent/5 p-8 rounded-lg">
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Entrega de Marca
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Storytelling natural + estética editorial clean + mensagens com responsabilidade socioambiental.
+              </p>
+            </div>
+            <div className="bg-accent/5 p-8 rounded-lg">
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Adequação
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Campanhas com propósito, produtos "clean/eco", experiências na natureza e projetos culturais.
+              </p>
+            </div>
           </div>
         </motion.div>
       </section>
 
-      {/* Lookbook/Portfolio Grid */}
+      {/* Estética & Styling */}
       <section className="px-6 lg:px-24 py-16 lg:py-24 bg-accent/5">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <h3 className="font-futura-light text-4xl md:text-5xl text-primary mb-12 tracking-wide">
+            Estética & Styling
+          </h3>
+          <div className="space-y-8">
+            <div>
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Beleza Natural
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Pele iluminada; make minimalista (realçar pele e olhar).
+              </p>
+            </div>
+            <div>
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Estilo
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Boêmio-brasileiro com influências cariocas e nordestinas (vestidos fluidos, tecidos crus/linho/algodão, acessórios artesanais, sandálias de palha, tons terrosos).
+              </p>
+            </div>
+            <div>
+              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                Paleta de Campanha
+              </h4>
+              <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                Verdes (musgo/oliva/verde-claro), marrons (caramelo/terracota/areia), neutros (cru/bege/off-white), toques de coral queimado/mostarda/azul-petróleo.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="px-6 lg:px-24 py-16 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -261,7 +282,7 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                   <img
                     src={image}
                     alt={`${avatar.name} - Portfólio ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-250 ease-out group-hover:scale-102"
+                    className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     style={{ contentVisibility: 'auto' }}
@@ -273,84 +294,11 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
         </motion.div>
       </section>
 
-      {/* CTA Section */}
-      <section className="px-6 lg:px-24 py-16 lg:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h3 className="font-futura-light text-3xl md:text-4xl text-primary mb-8 tracking-wide">
-            Interessado em trabalhar com {avatar.name}?
-          </h3>
-          <Button
-            size="lg"
-            className="font-futura tracking-widest bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg uppercase"
-          >
-            Contratar {avatar.name}
-          </Button>
-        </motion.div>
-      </section>
 
-      {/* Other Avatars */}
-      <section className="px-6 lg:px-24 py-16 lg:py-24 bg-accent/5">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="font-futura-light text-4xl md:text-5xl text-primary mb-12 tracking-wide">
-            Outros Avatares
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {otherAvatars.map((otherAvatar, index) => (
-              <motion.div
-                key={otherAvatar.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link 
-                  to={`/avatares/${otherAvatar.slug}`}
-                  className="group block overflow-hidden rounded-lg"
-                >
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img
-                      src={otherAvatar.heroImages[0]}
-                      alt={otherAvatar.name}
-                      className="w-full h-full object-cover transition-transform duration-250 ease-out group-hover:scale-102"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="pt-4">
-                    <h4 className="font-futura-light text-xl text-foreground tracking-wide mb-1">
-                      {otherAvatar.name}
-                    </h4>
-                    <p className="font-futura text-sm text-foreground/60 tracking-wide">
-                      {otherAvatar.subtitle}
-                    </p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
 
-      {/* Sticky CTA Button */}
-      <div className="fixed bottom-6 right-6 lg:bottom-12 lg:right-24 z-40">
-        <Button
-          variant="outline"
-          className="font-futura tracking-wide bg-background/90 backdrop-blur-sm border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-6 py-3 rounded-full shadow-lg"
-        >
-          Contratar {avatar.name}
-        </Button>
-      </div>
+
+
+
     </main>
   );
 };
