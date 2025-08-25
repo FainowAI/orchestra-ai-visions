@@ -70,12 +70,12 @@ export const avatarMockData = [
       { label: "IDIOMAS", value: "—" }
     ],
     heroImages: [
-      "/placeholder-hero-isabela-1.jpg",
-      "/placeholder-hero-isabela-2.jpg",
-      "/placeholder-hero-isabela-3.jpg"
+      "/src/assets/avatar-2.jpg",
+      "/src/assets/avatar-2.jpg",
+      "/src/assets/avatar-2.jpg"
     ],
     gallery: [
-      "/placeholder-gallery-isabela-1.jpg",
+      "/src/assets/avatar-2.jpg",
       "/placeholder-gallery-isabela-2.jpg",
       "/placeholder-gallery-isabela-3.jpg",
       "/placeholder-gallery-isabela-4.jpg",
