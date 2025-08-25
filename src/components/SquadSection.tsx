@@ -1,6 +1,7 @@
 import avatar1 from '@/assets/avatar-1.jpg';
 import avatar2 from '@/assets/avatar-2.jpg';
 import avatar3 from '@/assets/avatar-3.jpg';
+import avatar4 from '@/assets/avatar-1.jpg'; // Reutilizando avatar1 para o quarto avatar
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -12,8 +13,8 @@ const SquadSection = () => {
   const models = [
     {
       id: 1,
-      name: "ALEX",
-      slug: generateSlug("ALEX"),
+      name: "Lorenzo Bellini",
+      slug: generateSlug("Lorenzo Bellini"),
       image: avatar1
     },
     {
@@ -24,9 +25,15 @@ const SquadSection = () => {
     },
     {
       id: 3,
-      name: "OLIVER",
-      slug: generateSlug("OLIVER"),
+      name: "Tay Jackson",
+      slug: generateSlug("Tay Jackson"),
       image: avatar3
+    },
+    {
+      id: 4,
+      name: "Zack Blanco",
+      slug: generateSlug("Zack Blanco"),
+      image: avatar4
     }
   ];
 
@@ -56,7 +63,7 @@ const SquadSection = () => {
       </div>
 
       {/* Full-width Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 h-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto">
         {models.map((model, index) => (
           <motion.div 
             key={model.id}
