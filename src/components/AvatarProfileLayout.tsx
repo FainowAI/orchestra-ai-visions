@@ -192,7 +192,14 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                 Função
               </h4>
               <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Influencer de IA para ambiental, bem-estar, arte e moda sustentável.
+                {avatar.slug === 'zack' 
+                  ? 'Influencer de IA para lifestyle divertido, esportes radicais e humor.'
+                  : avatar.slug === 'tay-jackson'
+                  ? 'Influencer de IA para lifestyle, esportes, moda masculina e marcas de alto padrão.'
+                  : avatar.slug === 'lorenzo-bellini'
+                  ? 'Influencer de IA para lifestyle e moda masculina com estética mediterrânea.'
+                  : 'Influencer de IA para ambiental, bem-estar, arte e moda sustentável.'
+                }
               </p>
             </div>
             <div className="bg-accent/5 p-8 rounded-lg">
@@ -200,7 +207,14 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                 Entrega de Marca
               </h4>
               <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Storytelling natural + estética editorial clean + mensagens com responsabilidade socioambiental.
+                {avatar.slug === 'zack'
+                  ? 'Energia alta, storytelling com irreverência, conteúdo visual dinâmico (ações, POV/GoPro, cenas urbanas).'
+                  : avatar.slug === 'tay-jackson'
+                  ? 'Performance atlética + sofisticação; storytelling aspiracional com estética de luxo esportivo; autoridade e disciplina.'
+                  : avatar.slug === 'lorenzo-bellini'
+                  ? 'Storytelling contemplativo + direção de arte clean; foco em alfaiataria leve, materiais naturais e detalhes atemporais.'
+                  : 'Storytelling natural + estética editorial clean + mensagens com responsabilidade socioambiental.'
+                }
               </p>
             </div>
             <div className="bg-accent/5 p-8 rounded-lg">
@@ -208,7 +222,14 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
                 Adequação
               </h4>
               <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Campanhas com propósito, produtos "clean/eco", experiências na natureza e projetos culturais.
+                {avatar.slug === 'zack'
+                  ? 'Marcas que buscam autenticidade, leveza e ousadia (moda/athleisure, streetwear, gadgets/tech, bebidas & food service, turismo de aventura, eventos/experiências).'
+                  : avatar.slug === 'tay-jackson'
+                  ? 'Campanhas premium (luxo esportivo, moda urbana de alto padrão, viagens/extras exclusivas, relógios & acessórios, automotivo, bebidas & gastronomia fine dining).'
+                  : avatar.slug === 'lorenzo-bellini'
+                  ? 'Moda premium/alfaiataria, eyewear de design, relojoaria/acessórios discretos, hotelaria & viagens de charme, vinhos & gastronomia, automotivo de luxo.'
+                  : 'Campanhas com propósito, produtos "clean/eco", experiências na natureza e projetos culturais.'
+                }
               </p>
             </div>
           </div>
@@ -230,28 +251,79 @@ const AvatarProfileLayout: React.FC<AvatarProfileLayoutProps> = ({ avatar }) => 
           <div className="space-y-8">
             <div>
               <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
-                Beleza Natural
+                {avatar.slug === 'zack' ? 'Aparência' : avatar.slug === 'tay-jackson' ? 'Aparência' : avatar.slug === 'lorenzo-bellini' ? 'Look & vibe' : 'Beleza Natural'}
               </h4>
               <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Pele iluminada; make minimalista (realçar pele e olhar).
+                {avatar.slug === 'zack'
+                  ? 'Pele clara, sorriso largo e expressivo; cabelo castanho curto e bem finalizado.'
+                  : avatar.slug === 'tay-jackson'
+                  ? 'Pele negra radiante, sorriso confiante, porte atlético; cabelo curto e sempre bem finalizado.'
+                  : avatar.slug === 'lorenzo-bellini'
+                  ? 'Elegância natural; alfaiataria desconstruída, camisas de linho, blazers leves, jeans de corte preciso, mocassins de couro; acessórios discretos (relógios, lenços, óculos Persol).'
+                  : 'Pele iluminada; make minimalista (realçar pele e olhar).'
+                }
               </p>
             </div>
-            <div>
-              <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
-                Estilo
-              </h4>
-              <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Boêmio-brasileiro com influências cariocas e nordestinas (vestidos fluidos, tecidos crus/linho/algodão, acessórios artesanais, sandálias de palha, tons terrosos).
-              </p>
-            </div>
+            {avatar.slug !== 'lorenzo-bellini' && (
+              <div>
+                <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                  {avatar.slug === 'zack' ? 'Look & vibe' : avatar.slug === 'tay-jackson' ? 'Look & vibe' : 'Estilo'}
+                </h4>
+                <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                  {avatar.slug === 'zack'
+                    ? 'Urbano-moderno com pegada esportiva — blazer leve + camiseta básica + sneakers; bomber e peças casuais; mistura de street com performance (pronto tanto para um evento quanto para uma aventura).'
+                    : avatar.slug === 'tay-jackson'
+                    ? 'Esportivo premium + casual de luxo — polos, jaquetas de couro, sneakers exclusivos, ternos sob medida.'
+                    : 'Boêmio-brasileiro com influências cariocas e nordestinas (vestidos fluidos, tecidos crus/linho/algodão, acessórios artesanais, sandálias de palha, tons terrosos).'
+                  }
+                </p>
+              </div>
+            )}
             <div>
               <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
                 Paleta de Campanha
               </h4>
               <p className="font-futura-light text-lg text-foreground leading-relaxed">
-                Verdes (musgo/oliva/verde-claro), marrons (caramelo/terracota/areia), neutros (cru/bege/off-white), toques de coral queimado/mostarda/azul-petróleo.
+                {avatar.slug === 'zack'
+                  ? 'Vermelho vibrante, azul elétrico, preto e branco (urbano/energético).'
+                  : avatar.slug === 'tay-jackson'
+                  ? 'Azul-marinho, preto, cinza metálico, branco minimalista; acentos dourado/prata e verde-esporte em detalhes.'
+                  : avatar.slug === 'lorenzo-bellini'
+                  ? 'Bege, off-white, cáqui, terracota, vinho, verde oliva com detalhes azul-marinho/preto.'
+                  : 'Verdes (musgo/oliva/verde-claro), marrons (caramelo/terracota/areia), neutros (cru/bege/off-white), toques de coral queimado/mostarda/azul-petróleo.'
+                }
               </p>
             </div>
+            {avatar.slug === 'zack' && (
+              <div>
+                <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                  Cenários Sugeridos
+                </h4>
+                <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                  Salto de paraquedas (POV), snowboard na neve, rodas de pagode/samba em SP, hamburguerias descoladas, shows de rock/metal, feiras e eventos com energia jovem.
+                </p>
+              </div>
+            )}
+            {avatar.slug === 'tay-jackson' && (
+              <div>
+                <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                  Cenários Sugeridos
+                </h4>
+                <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                  Campos de golfe de luxo, pistas de atletismo modernas, rooftops urbanos, shows de rock/rap, salas de concerto (Vivaldi), viagens internacionais com atmosfera exclusiva.
+                </p>
+              </div>
+            )}
+            {avatar.slug === 'lorenzo-bellini' && (
+              <div>
+                <h4 className="font-futura text-lg tracking-widest uppercase text-foreground/60 mb-4">
+                  Cenários Sugeridos
+                </h4>
+                <p className="font-futura-light text-lg text-foreground leading-relaxed">
+                  Cafés, galerias e praças históricas; praias da Itália e do Rio de Janeiro; test-drives e estradas costeiras em carros italianos; wine bars ao entardecer com jazz ou bossa.
+                </p>
+              </div>
+            )}
           </div>
         </motion.div>
       </section>

@@ -22,20 +22,19 @@ export const avatarMockData = [
   {
     id: 1,
     name: "Lorenzo Bellini",
-    slug: generateSlug("Lorenzo Bellini"),
-    subtitle: "Digital Model & Brand Ambassador",
+    slug: "lorenzo-bellini",
+    subtitle: "Avatar de IA | Lifestyle, Elegância Mediterrânea e Moda Masculina",
     bio: [
-      "Lorenzo representa a nova geração de modelos digitais, combinando elegância clássica com inovação tecnológica. Especializado em campanhas de moda e lifestyle, tem presença marcante em diversas plataformas.",
-      "Criado com tecnologia de IA generativa avançada, Lorenzo adapta-se perfeitamente a diferentes contextos de marca, mantendo sempre sua personalidade única e autêntica.",
-      "Ideal para marcas que buscam representação moderna e sofisticada, Lorenzo já participou de campanhas para segmentos de moda, tecnologia e luxo."
+      "Lorenzo Bellini é um flâneur contemporâneo que se move pelo mundo com leveza e intenção, entrelaçando cultura, moda e arte. Sua proposta é encantar sem excessos: elegância que nasce da autenticidade e sutileza.",
+      "Com estética mediterrânea e olhar curatorial, inspira um viver refinado, consciente e inspirador — ideal para marcas que valorizam sofisticação discreta, qualidade de materiais e histórias atemporais."
     ],
     facts: [
-      { label: "Origem", value: "São Paulo, Brasil" },
-      { label: "Idade", value: "25 anos" },
-      { label: "Altura", value: "1,85m" },
-      { label: "Cabelo", value: "Castanho escuro" },
-      { label: "Olhos", value: "Castanhos" },
-      { label: "Idiomas", value: "Português, Inglês" }
+      { label: "ORIGEM", value: "Florença, Itália" },
+      { label: "IDADE", value: "32 anos" },
+      { label: "ALTURA", value: "1,87 m" },
+      { label: "CABELO", value: "castanho-escuro, ondulado" },
+      { label: "OLHOS", value: "cor de mel" },
+      { label: "IDIOMAS", value: "português, italiano, espanhol, inglês" }
     ],
     heroImages: [
       "/placeholder-hero-1.jpg",
@@ -93,20 +92,19 @@ export const avatarMockData = [
   {
     id: 3,
     name: "Tay Jackson",
-    slug: generateSlug("Tay Jackson"),
-    subtitle: "Luxury Brand Ambassador",
+    slug: "tay-jackson",
+    subtitle: "Avatar de IA | Esporte, Luxo e Estilo Global",
     bio: [
-      "Tay representa o epítome da sofisticação masculina no mundo digital. Com sua presença imponente e carisma natural, ele estabelece novos padrões de excelência em modelagem virtual.",
-      "Especializado em segmentos de luxo, automobilístico e lifestyle premium, Tay combina elegância atemporal com um toque moderno que ressoa com audiências globais.",
-      "Sua versatilidade permite adaptação perfeita a diferentes contextos de marca, mantendo sempre a autenticidade que o torna único no mercado de avatares digitais."
+      "Tay Jackson é um avatar criado pela Orchestra — espírito vencedor, energia contagiante e raízes que atravessam continentes. Nascido em Atlanta, filho de pai brasileiro e mãe americana, incorpora com orgulho sua descendência angolana. Leão por essência: confiante, magnético e competitivo.",
+      "Atleta por natureza (golfe e atletismo), vive o lifestyle high ticket cercado de marcas esportivas premium e experiências exclusivas. Conectado à música (do rap ao rock e à clássica), tem Vivaldi como trilha antes de competir. Sauvage é sua assinatura olfativa."
     ],
     facts: [
-      { label: "Origem", value: "Londres, Reino Unido" },
-      { label: "Idade", value: "28 anos" },
-      { label: "Altura", value: "1,88m" },
-      { label: "Cabelo", value: "Preto" },
-      { label: "Olhos", value: "Azuis" },
-      { label: "Idiomas", value: "Inglês, Português, Espanhol" }
+      { label: "ORIGEM", value: "Atlanta (EUA) • pai brasileiro • mãe americana • descendência angolana" },
+      { label: "IDADE", value: "29 anos" },
+      { label: "ALTURA", value: "—" },
+      { label: "CABELO", value: "curto, estilizado e impecável" },
+      { label: "OLHOS", value: "—" },
+      { label: "IDIOMAS", value: "inglês, português, espanhol e francês (fluentes)" }
     ],
     heroImages: [
       "/placeholder-hero-tay-1.jpg",
@@ -127,20 +125,20 @@ export const avatarMockData = [
   {
     id: 4,
     name: "Zack Blanco",
-    slug: generateSlug("Zack Blanco"),
-    subtitle: "Tech & Innovation Ambassador",
+    slug: "zack",
+    subtitle: "Avatar de IA | Lifestyle, Humor e Esportes Radicais",
     bio: [
-      "Zack personifica a fusão perfeita entre tecnologia e estilo contemporâneo. Com sua aparência moderna e versatilidade digital, ele é ideal para marcas que buscam representação inovadora.",
-      "Especializado em campanhas de tecnologia, gaming e lifestyle urbano, Zack conecta-se naturalmente com audiências jovens e tecnologicamente avançadas.",
-      "Sua capacidade de adaptação a diferentes contextos digitais o torna uma escolha perfeita para marcas que valorizam inovação e autenticidade."
+      "Zack é um avatar criado pela Orchestra — paulista, irreverente e cheio de energia. Carismático por natureza, chama atenção sem esforço: confiante, bem-humorado e pronto para transformar qualquer situação em cena memorável.",
+      "De ascendência espanhola, cresceu no ritmo urbano de São Paulo e vive intensamente, com espírito aventureiro e humor contagiante. Gosta de esportes radicais (snowboard, paraquedismo, windsurf, skate), equilibra marcas premium com peças populares estilosas e cuida da aparência.",
+      "É presença certa em restaurantes de hambúrguer artesanal, shows de rock/metal e eventos de networking jovem."
     ],
     facts: [
-      { label: "Origem", value: "Los Angeles, EUA" },
-      { label: "Idade", value: "26 anos" },
-      { label: "Altura", value: "1,82m" },
-      { label: "Cabelo", value: "Loiro" },
-      { label: "Olhos", value: "Verdes" },
-      { label: "Idiomas", value: "Inglês, Espanhol" }
+      { label: "ORIGEM", value: "São Paulo (SP) • descendência espanhola" },
+      { label: "IDADE", value: "28 anos" },
+      { label: "ALTURA", value: "—" },
+      { label: "CABELO", value: "castanho, curto, bem cuidado (estilo casual)" },
+      { label: "OLHOS", value: "—" },
+      { label: "IDIOMAS", value: "—" }
     ],
     heroImages: [
       "/placeholder-hero-zack-1.jpg",

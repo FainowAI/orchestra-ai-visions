@@ -14,7 +14,7 @@ const SquadSection = () => {
     {
       id: 1,
       name: "Lorenzo Bellini",
-      slug: generateSlug("Lorenzo Bellini"),
+      slug: "lorenzo-bellini",
       image: avatar1
     },
     {
@@ -26,13 +26,13 @@ const SquadSection = () => {
     {
       id: 3,
       name: "Tay Jackson",
-      slug: generateSlug("Tay Jackson"),
+      slug: "tay-jackson",
       image: avatar3
     },
     {
       id: 4,
       name: "Zack Blanco",
-      slug: generateSlug("Zack Blanco"),
+      slug: "zack",
       image: avatar4
     }
   ];
